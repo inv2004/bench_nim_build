@@ -1,12 +1,11 @@
 @echo off
 
-del ~\nimcache\koch_d
-del ~\nimcache\nim_r
-del ~\nimcache\nimble_r
-del ~\nimcache\nimgrep_r
-del ~\nimcache\nimpretty_r
-del ~\nimcache\nimsuggest_r
-del ~\nimcache\testament_r
+rmdir /S /Q ~\nimcache\nim_r
+rmdir /S /Q ~\nimcache\nimble_r
+rmdir /S /Q ~\nimcache\nimgrep_r
+rmdir /S /Q ~\nimcache\nimpretty_r
+rmdir /S /Q ~\nimcache\nimsuggest_r
+rmdir /S /Q ~\nimcache\testament_r
 
 set DIR=benchnim
 
@@ -18,10 +17,20 @@ if not exist NimCloned (
   Call :Prep
 )
 
-cd NimCloned
+del time.log
+Call :CollectInfo
+
+@REM rmdir /Q /S Nim
+@echo on
+@REM Robocopy.exe /NFL /NDL /ETA /E NimCloned Nim
+@echo off
+cd Nim
+@REM Call :Bench .\build_all.bat
+@REM Call :Bench .\koch.exe temp -d:release
 Call :Bench ls
-Call :Bench ls -al
+Call :Bench ls .
 cd ..
+type time.log
 cd ..
 
 exit /B %ERRORLEVEL%
@@ -54,7 +63,7 @@ if 1%ms% lss 100 set ms=0%ms%
 
 :: Mission accomplished
 set /a totalsecs = %hours%*3600 + %mins%*60 + %secs%
-echo command took %hours%:%mins%:%secs%.%ms% (%totalsecs%.%ms%s total)
+echo %totalsecs%.%ms%s seconds: %* >> ..\time.log
 exit /B %ERRORLEVEL%
 
 :Prep
@@ -75,4 +84,10 @@ exit /B %ERRORLEVEL%
     cd ..
   )
   cd ..
+exit /B %ERRORLEVEL%
+
+:CollectInfo
+wmic CPU get Name,CurrentClockSpeed,NumberOfCores /VALUE >> time.log
+wmic ComputerSystem get TotalPhysicalMemory /VALUE >> time.log
+wmic MemoryChip get Speed /VALUE >> time.log
 exit /B %ERRORLEVEL%
