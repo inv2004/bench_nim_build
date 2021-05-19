@@ -2,8 +2,7 @@
 
 DIR=benchnim
 
-rm -rf $HOME/.cache/nim/{koch_d,testament_r} 
-exit 1
+rm -rf $HOME/.cache/nim/{koch_d,nim_r,nimble_r,nimgrep_r,nimpretty_r,nimsuggest_r,testament_r}
 
 collectinfo() {
   OS=$(uname)
