@@ -12,7 +12,7 @@ collectinfo() {
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     free -h | awk 'NR==2 {print "Ram:" $2}'
     echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | head -n1`
-    [[ grep -i microsoft /proc/version ]] && { OS="$OS (WSL2)"; }
+    grep -i microsoft /proc/version && { OS="$OS (WSL2)"; }
     echo "OS: $OS"
   } || {
     echo 'CPU: ' `sysctl -n hw.model`
@@ -44,7 +44,7 @@ echo url
 openDefaultBrowser(url)
 EEE
 
-[[ grep -i microsoft /proc/version ]] && { export BROWSER=wslview; }
+grep -i microsoft /proc/version && { export BROWSER=wslview; }
 ./Nim/bin/nim c -r complete.nim
 
 }
