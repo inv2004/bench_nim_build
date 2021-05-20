@@ -22,7 +22,6 @@ set DIR=benchnim
 mkdir %DIR%
 cd %DIR%
 
-dir
 if not exist NimCloned (
   Call :Prep
 )
