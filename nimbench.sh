@@ -62,10 +62,10 @@ mkdir -p $DIR
     echo_run git -C "$nim_csourcesDir" checkout $nim_csourcesHash
   )
 
-  #[[ -d Nim ]] && rm -rf Nim
-  #cp -r NimCloned Nim && \
-  #bench_cmd ./build_all.sh && \
-  #bench_cmd ./koch temp -d:release
+  [[ -d Nim ]] && rm -rf Nim
+  cp -r NimCloned Nim && \
+  bench_cmd ./build_all.sh && \
+  bench_cmd ./koch temp -d:release
 
   cat time.log && \
   complete
