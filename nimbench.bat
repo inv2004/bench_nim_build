@@ -19,14 +19,15 @@ if not exist NimCloned (
 
 Call :CollectInfo
 
-@REM rmdir /Q /S Nim
+rmdir /Q /S Nim
 @echo on
-@REM Robocopy.exe /NFL /NDL /ETA /E NimCloned Nim
+Robocopy.exe /NFL /NDL /ETA /E NimCloned Nim
 @echo off
 cd Nim
-@REM Call :Bench .\build_all.bat
-@REM Call :Bench .\koch.exe temp -d:release
+Call :Bench .\build_all.bat
+Call :Bench .\koch.exe temp -d:release
 cd ..
+type time.log
 Call :Complete
 cd ..
 
@@ -86,21 +87,22 @@ exit /B %ERRORLEVEL%
 :CollectInfo
 for /f "delims== usebackq skip=1" %%i in (`wmic cpu get Name ^| findstr /r /v "^$"`) do (echo CPU: %%i) > time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic cpu get NumberOfCores ^| findstr /r /v "^$"`) do (echo Cores: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic cpu get CurrentClockSpeed ^| findstr /r /v "^$"`) do (echo Freq: %%i) >> time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic computersystem get TotalPhysicalMemory ^| findstr /r /v "^$"`) do (echo Ram: %%i) >> time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic memorychip get Speed ^| findstr /r /v "^$"`) do (echo MemFreq: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic diskdrive get Model ^| findstr /r /v "^$"`) do (echo Disk: %%i) >> time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic os get Caption ^| findstr /r /v "^$"`) do (echo OS: %%i) >> time.log
-@REM wmic CPU get Name,CurrentClockSpeed,NumberOfCores /VALUE > time.log
-@REM wmic ComputerSystem get TotalPhysicalMemory /VALUE >> time.log
-@REM wmic MemoryChip get Speed /VALUE >> time.log
-
 exit /B %ERRORLEVEL%
 
 :Complete
 echo import browsers, uri, strformat, strutils, sequtils > complete.nim
 echo let lines = toSeq(lines("time.log")).deduplicate() >> complete.nim
 echo let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl() >> complete.nim
-echo let body = ("```\n" ^&^& lines.join("\n") ^&^& "```").encodeUrl() >> complete.nim
-echo openDefaultBrowser(fmt"https://github.com/inv2004/build_nim_benchmarks/issues/new?title={title}&body={body}") >> complete.nim
+echo let body = ("```\n" ^& lines.join("\n") ^& "\n```").encodeUrl() >> complete.nim
+echo let url = fmt"https://github.com/inv2004/build_nim_benchmarks/issues/new?title={title}&body={body}" >> complete.nim
+echo echo "Please open in your browser the following link if browser is not open:" >> complete.nim
+echo echo url >> complete.nim
+echo openDefaultBrowser(url) >> complete.nim
 
 .\Nim\bin\nim.exe c -r complete.nim
 
