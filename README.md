@@ -5,7 +5,7 @@ Tool to benchmark (Nim)[https://github.com/nim-lang/Nim] compile time
 # Run
 
 ## Warning
-THe script deletes `koch_d` `nim_r` `nimble_r` `nimgrep_r` `nimpretty_r` `nimsuggest_r` `testament_r` from Nim's cache
+The script deletes `koch_d` `nim_r` `nimble_r` `nimgrep_r` `nimpretty_r` `nimsuggest_r` `testament_r` from Nim's cache
 
 ## Linux
 ```bash
