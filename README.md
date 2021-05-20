@@ -1,6 +1,6 @@
 # build_nim_benchmarks
 
-Tool to benchmark (Nim)[https://github.com/nim-lang/Nim] compile time
+Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 
 # Run
 
