@@ -4,7 +4,7 @@ Tool to benchmark (Nim)[https://github.com/nim-lang/Nim] compile time
 
 # Run
 
-**Needs Git**
+**It needs git and gcc(mingw) to run it**
 
 ## Warning
 The script deletes `koch_d` `nim_r` `nimble_r` `nimgrep_r` `nimpretty_r` `nimsuggest_r` `testament_r` from Nim's cache
