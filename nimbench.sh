@@ -10,7 +10,7 @@ collectinfo() {
     awk -F: '/model name/ {name=$2} END {print "CPU:" name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     awk -F: '/model name/ {core++} END {print "Cores: " core}' /proc/cpuinfo
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
-    free -h | awk 'NR==2 {print "Ram:" $2}'
+    free -h | awk 'NR==2 {print "Ram: " $2}'
     echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | head -n1`
     echo "OS: $OS (`uname -r`)"
   } || {
