@@ -12,8 +12,7 @@ collectinfo() {
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     free -h | awk 'NR==2 {print "Ram:" $2}'
     echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | head -n1`
-    grep -i microsoft /proc/version >/dev/null && { OS="$OS (WSL2)"; }
-    echo "OS: $OS"
+    echo "OS: $OS (`uname -r`)"
   } || {
     echo 'CPU: ' `sysctl -n hw.model`
     echo 'Cores: ' `sysctl -n hw.ncpu`
@@ -35,7 +34,7 @@ complete() {
   cat >complete.nim <<'EEE'
 import browsers, uri, strformat, strutils, sequtils
 let lines = toSeq(lines("time.log")).deduplicate()
-echo echo lines.join("\n")
+echo lines.join("\n")
 let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl()
 let body = ("```\n" & lines.join("\n") & "\n```").encodeUrl()
 let url = fmt"https://github.com/inv2004/bench_nim_build/issues/new?title={title}&labels=stats&body={body}"

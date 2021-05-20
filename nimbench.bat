@@ -22,12 +22,14 @@ set DIR=benchnim
 mkdir %DIR%
 cd %DIR%
 
+Call :CollectInfo
+type time.log
+exit /B 1
+
 dir
 if not exist NimCloned (
   Call :Prep
 )
-
-Call :CollectInfo
 
 rmdir /Q /S Nim
 @echo on
@@ -101,7 +103,9 @@ for /f "delims== usebackq skip=1" %%i in (`wmic cpu get CurrentClockSpeed ^| fin
 for /f "delims== usebackq skip=1" %%i in (`wmic computersystem get TotalPhysicalMemory ^| findstr /r /v "^$"`) do (echo Ram: %%i) >> time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic memorychip get Speed ^| findstr /r /v "^$"`) do (echo MemFreq: %%i) >> time.log
 for /f "delims== usebackq skip=1" %%i in (`wmic diskdrive get Model ^| findstr /r /v "^$"`) do (echo Disk: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic os get Caption ^| findstr /r /v "^$"`) do (echo OS: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic os get Caption ^| findstr /r /v "^$"`) do (set CAP=%%i)
+for /f "delims== usebackq skip=1" %%i in (`wmic os get Version ^| findstr /r /v "^$"`) do (set VER=%%i)
+echo OS: %CAP% (%VER%) >> time.log
 exit /B %ERRORLEVEL%
 
 :Complete
