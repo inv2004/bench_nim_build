@@ -99,7 +99,7 @@ echo import browsers, uri, strformat, strutils, sequtils > complete.nim
 echo let lines = toSeq(lines("time.log")).deduplicate() >> complete.nim
 echo let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl() >> complete.nim
 echo let body = ("```\n" ^& lines.join("\n") ^& "\n```").encodeUrl() >> complete.nim
-echo let url = fmt"https://github.com/inv2004/build_nim_benchmarks/issues/new?title={title}&body={body}" >> complete.nim
+echo let url = fmt"https://github.com/inv2004/bench_nim_build/issues/new?title={title}&body={body}" >> complete.nim
 echo echo "Please open in your browser the following link if browser is not open:" >> complete.nim
 echo echo url >> complete.nim
 echo openDefaultBrowser(url) >> complete.nim

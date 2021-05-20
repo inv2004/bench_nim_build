@@ -36,7 +36,7 @@ import browsers, uri, strformat, strutils, sequtils
 let lines = toSeq(lines("time.log")).deduplicate()
 let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl()
 let body = ("```\n" & lines.join("\n") & "\n```").encodeUrl()
-let url = fmt"https://github.com/inv2004/build_nim_benchmarks/issues/new?title={title}&labels=stats&body={body}"
+let url = fmt"https://github.com/inv2004/bench_nim_build/issues/new?title={title}&labels=stats&body={body}"
 echo "Please open in your browser the following link if browser is not open:"
 echo url
 openDefaultBrowser(url)
