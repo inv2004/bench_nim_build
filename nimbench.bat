@@ -1,5 +1,15 @@
 @echo off
 
+git --version >nul 2>&1 || (
+  echo git not found
+  exit /B 1
+)
+
+gcc --version >nul 2>&1 || (
+  echo gcc not found
+  exit /B 1
+)
+
 rmdir /S /Q ~\nimcache\nim_r
 rmdir /S /Q ~\nimcache\nimble_r
 rmdir /S /Q ~\nimcache\nimgrep_r
