@@ -22,14 +22,12 @@ set DIR=benchnim
 mkdir %DIR%
 cd %DIR%
 
-Call :CollectInfo
-type time.log
-exit /B 1
-
 dir
 if not exist NimCloned (
   Call :Prep
 )
+
+Call :CollectInfo
 
 rmdir /Q /S Nim
 @echo on
