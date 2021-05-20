@@ -107,6 +107,7 @@ exit /B %ERRORLEVEL%
 :Complete
 echo import browsers, uri, strformat, strutils, sequtils > complete.nim
 echo let lines = toSeq(lines("time.log")).deduplicate() >> complete.nim
+echo echo lines.join("\n") >> complete.nim
 echo let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl() >> complete.nim
 echo let body = ("```\n" ^& lines.join("\n") ^& "\n```").encodeUrl() >> complete.nim
 echo let url = fmt"https://github.com/inv2004/bench_nim_build/issues/new?title={title}&labels=stats&body={body}" >> complete.nim

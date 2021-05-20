@@ -34,6 +34,7 @@ complete() {
   cat >complete.nim <<'EEE'
 import browsers, uri, strformat, strutils, sequtils
 let lines = toSeq(lines("time.log")).deduplicate()
+echo echo lines.join("\n")
 let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl()
 let body = ("```\n" & lines.join("\n") & "\n```").encodeUrl()
 let url = fmt"https://github.com/inv2004/bench_nim_build/issues/new?title={title}&labels=stats&body={body}"
