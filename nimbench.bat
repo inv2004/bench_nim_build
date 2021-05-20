@@ -17,7 +17,6 @@ if not exist NimCloned (
   Call :Prep
 )
 
-del time.log
 Call :CollectInfo
 
 @REM rmdir /Q /S Nim
@@ -27,10 +26,8 @@ Call :CollectInfo
 cd Nim
 @REM Call :Bench .\build_all.bat
 @REM Call :Bench .\koch.exe temp -d:release
-Call :Bench ls
-Call :Bench ls .
 cd ..
-type time.log
+Call :Complete
 cd ..
 
 exit /B %ERRORLEVEL%
@@ -87,7 +84,24 @@ exit /B %ERRORLEVEL%
 exit /B %ERRORLEVEL%
 
 :CollectInfo
-wmic CPU get Name,CurrentClockSpeed,NumberOfCores /VALUE >> time.log
-wmic ComputerSystem get TotalPhysicalMemory /VALUE >> time.log
-wmic MemoryChip get Speed /VALUE >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic cpu get Name ^| findstr /r /v "^$"`) do (echo CPU: %%i) > time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic cpu get NumberOfCores ^| findstr /r /v "^$"`) do (echo Cores: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic computersystem get TotalPhysicalMemory ^| findstr /r /v "^$"`) do (echo Ram: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic memorychip get Speed ^| findstr /r /v "^$"`) do (echo MemFreq: %%i) >> time.log
+for /f "delims== usebackq skip=1" %%i in (`wmic os get Caption ^| findstr /r /v "^$"`) do (echo OS: %%i) >> time.log
+@REM wmic CPU get Name,CurrentClockSpeed,NumberOfCores /VALUE > time.log
+@REM wmic ComputerSystem get TotalPhysicalMemory /VALUE >> time.log
+@REM wmic MemoryChip get Speed /VALUE >> time.log
+
+exit /B %ERRORLEVEL%
+
+:Complete
+echo import browsers, uri, strformat, strutils, sequtils > complete.nim
+echo let lines = toSeq(lines("time.log")).deduplicate() >> complete.nim
+echo let title = lines.filterIt(it.startsWith("CPU:")).join().encodeUrl() >> complete.nim
+echo let body = ("```\n" ^&^& lines.join("\n") ^&^& "```").encodeUrl() >> complete.nim
+echo openDefaultBrowser(fmt"https://github.com/inv2004/build_nim_benchmarks/issues/new?title={title}&body={body}") >> complete.nim
+
+.\Nim\bin\nim.exe c -r complete.nim
+
 exit /B %ERRORLEVEL%
