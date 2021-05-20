@@ -26,7 +26,8 @@ collectinfo() {
 bench_cmd() {
   (
     echo Benching $@
-    cd Nim && /usr/bin/time -f "%e seconds: $*" -a -o ../time.log $@
+    export TIMEFORMAT="%3R seconds: $*"
+    cd Nim && ( time $@ 2>&3 ) 3>&2 2>>../time.log
   ) || { echo Error during build; exit 1; }
 }
 
@@ -67,7 +68,6 @@ mkdir -p $DIR
   bench_cmd ./build_all.sh && \
   bench_cmd ./koch temp -d:release
 
-  cat time.log && \
   complete
 )
 
