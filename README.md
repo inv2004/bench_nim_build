@@ -19,7 +19,7 @@ bash nimbench.sh
 
 ```cmd
 bitsadmin /transfer download https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.bat "%cd%\nimbench.bat"
-.\nimbench.bat
+nimbench.bat
 ```
 
 ## OSX (Not ready)
