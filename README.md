@@ -15,11 +15,11 @@ bash nimbench.sh
 
 ## Windows
 ```cmd
-curl -O https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.bat
-cmd nimbench.bat
+bitsadmin /transfer download https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.bat "%cd%\nimbench.bat"
+nimbench.bat
 ```
 
-## OSX
+## OSX (Not ready)
 ```bash
 curl -O https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.sh
 bash nimbench.sh
