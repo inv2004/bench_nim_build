@@ -22,7 +22,7 @@ bitsadmin /transfer download https://raw.githubusercontent.com/inv2004/bench_nim
 nimbench.bat
 ```
 
-## OSX (Not ready)
+## OSX
 ```bash
 curl -O https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.sh
 bash nimbench.sh

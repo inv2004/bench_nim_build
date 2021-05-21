@@ -14,12 +14,12 @@ collectinfo() {
     echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | head -n1`
     echo "OS: $OS (`uname -r`)"
   } || {
-    echo 'CPU: ' `sysctl -n hw.model`
-    echo 'Cores: ' `sysctl -n hw.ncpu`
-    echo 'Freq: ' `sysctl -n hw.cpufrequency`
-    echo 'RAM: ' `sysctl -n hw.physmem`
-    echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | head -n1`
-    echo "OS: $OS"
+    echo 'CPU:' `sysctl -n machdep.cpu.brand_string`
+    echo 'Cores:' `sysctl -n hw.ncpu`
+    echo 'Freq:' $((`sysctl -n hw.cpufrequency` / 1000000))
+    echo 'RAM:' `sysctl -n hw.physmem`
+    diskutil info disk0 | grep 'Device / Media' | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print "Disk: " $2}'
+    echo "OS: $OS (`uname -r`)"
   }
 }
 
@@ -68,6 +68,7 @@ mkdir -p $DIR
   bench_cmd ./build_all.sh && \
   bench_cmd ./koch temp -d:release
 
+  echo Delete $DIR folder manualy if you want to cleanup artefacts of the benchmark
+
   complete
 )
-

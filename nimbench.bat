@@ -118,4 +118,6 @@ echo openDefaultBrowser(url) >> complete.nim
 
 .\Nim\bin\nim.exe c -r complete.nim
 
+echo Delete %DIR% folder manualy if you want to cleanup artefacts of the benchmark
+
 exit /B %ERRORLEVEL%
