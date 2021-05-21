@@ -70,7 +70,7 @@ if 1%ms% lss 100 set ms=0%ms%
 
 :: Mission accomplished
 set /a totalsecs = %hours%*3600 + %mins%*60 + %secs%
-echo %totalsecs%.%ms%s seconds: %* >> ..\time.log
+echo %totalsecs%.%ms% seconds: %* >> ..\time.log
 exit /B %ERRORLEVEL%
 
 :Prep
