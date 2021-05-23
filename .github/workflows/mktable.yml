@@ -11,9 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
       - run: |
-          cd src && \
           nimble install github decimal -y && \
-          GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" nim c -d:ssl -r mktable.nim readme && \
+          GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" nim c -d:ssl -r src/mktable.nim readme && \
           mv -f README.md.new README.md
       - uses: EndBug/add-and-commit@v7
         with:
