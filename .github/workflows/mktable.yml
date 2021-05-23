@@ -10,4 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
-      - run: cd src && nimble install github decimal -y && GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" nim c -d:ssl -r mktable.nim
+      - run: |
+          cd src && \
+          nimble install github decimal -y && \
+          GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" nim c -d:ssl -r mktable.nim readme && \
+          mv -f README.md.new README.md
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: "README.md"
+          author_name: Robot
+          message: 'Auto-update'
+          push: true
+

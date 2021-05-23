@@ -53,7 +53,9 @@ proc process(j: JsonNode): seq[string] =
 
 proc changeReadme(tblStr: seq[string]) =
   let f = open("README.md")
+  defer: close(f)
   let w = open("README.md.new", fmWrite)
+  defer: close(w)
   var l: string
   while readLine(f, l):
     if l.startsWith("CPU|Cores"):
@@ -65,8 +67,6 @@ proc changeReadme(tblStr: seq[string]) =
           break
     else:
       w.writeLine l
-
-  close(f)
 
 proc main() =
   let req = getReposOwnerRepoIssues.call("stats", "bench_nim_build", "inv2004")
