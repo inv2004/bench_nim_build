@@ -4,6 +4,7 @@ import json
 import strutils
 import algorithm
 import decimal
+import os
 
 import github
 
@@ -36,10 +37,9 @@ proc processBody(body: string): Row =
 
   result
 
-proc process(j: JsonNode) =
-  # tbl.separateRows = false
-  echo "CPU|Cores|OS|build_all(s)|koch temp(s)|Link"
-  echo "---|-----|--|------------|------------|----"
+proc process(j: JsonNode): seq[string] =
+  result.add "CPU|Cores|OS|build_all(s)|koch temp(s)|Link"
+  result.add "---|-----|--|------------|------------|----"
 
   var t: seq[Row]
 
@@ -49,14 +49,35 @@ proc process(j: JsonNode) =
     t.add row
 
   for row in t.sortedByIt(it.run1 + it.run2):
-    echo @[row.cpu, row.cores, row.os, $row.run1, $row.run2, row.link].join("|")
+    result.add @[row.cpu, row.cores, row.os, $row.run1, $row.run2, row.link].join("|")
+
+proc changeReadme(tblStr: seq[string]) =
+  let f = open("README.md")
+  let w = open("README.md.new", fmWrite)
+  var l: string
+  while readLine(f, l):
+    if l.startsWith("CPU|Cores"):
+      for ll in tblStr:
+        w.writeLine ll
+      while readLine(f, l):
+        if l.len == 0:
+          w.writeLine ""
+          break
+    else:
+      w.writeLine l
+
+  close(f)
 
 proc main() =
   let req = getReposOwnerRepoIssues.call("stats", "bench_nim_build", "inv2004")
   let res = waitFor req.retry(tries = 1)
   echo res.code
   let j = parseJson(waitFor res.body)
-  process(j)
+  let tblStr = process(j)
+  if paramCount() >= 1 and paramStr(1) == "readme":
+    changeReadme(tblStr)
+  else:
+    echo tblStr
 
 when isMainModule:
   main()
