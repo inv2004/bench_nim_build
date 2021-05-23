@@ -45,7 +45,8 @@ proc process(j: JsonNode): seq[string] =
 
   for issue in j:
     var row = processBody issue{"body"}.getStr
-    row.link = "[" & $issue["number"].getInt & "](" & issue["url"].getStr & ")"
+    echo issue.pretty
+    row.link = "[" & $issue["number"].getInt & "](" & issue["html_url"].getStr & ")"
     t.add row
 
   for row in t.sortedByIt(it.run1 + it.run2):
@@ -77,7 +78,8 @@ proc main() =
   if paramCount() >= 1 and paramStr(1) == "readme":
     changeReadme(tblStr)
   else:
-    echo tblStr
+    for l in tblStr:
+      echo l
 
 when isMainModule:
   main()
