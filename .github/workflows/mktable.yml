@@ -3,8 +3,9 @@ on:
     types: [labeled]
 
 jobs:
-  job:
+  update-table:
     runs-on: ubuntu-latest
     steps:
-      - run: echo okk
-
+      - uses: actions/checkout@v2
+      - uses: jiro4989/setup-nim-action@v1
+      - run: cd src && nimble install github -y && nim c -d:ssl -r mktable.nim
