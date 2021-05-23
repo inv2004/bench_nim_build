@@ -26,6 +26,8 @@ Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|905.112|292.00
 
 **It needs git and gcc(mingw) to run it**
 
+After run it will open browser to add the results into the repo automatically
+
 ## Warning
 The script deletes `koch_d` `nim_r` `nimble_r` `nimgrep_r` `nimpretty_r` `nimsuggest_r` `testament_r` from Nim's cache
 
