@@ -4,6 +4,8 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 
 # Results
 
+Ordered by sum of build_all and koch
+
 CPU                                      | Cores | Freq         | Ram         | Disk               | OS                                        | build_all (s) | koch temp (s)
 -----------------------------------------|-------|--------------|-------------|--------------------|-------------------------------------------|---------------|---------------
 | Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz | 32    | 2693.672 MHz | 62Gi        |                    | Linux (5.4.0-51-generic)                  | 102.739       | 33.637        |       

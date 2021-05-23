@@ -4,12 +4,12 @@ import json
 import strutils
 import algorithm
 
-import terminaltables
 import github
 
 type
   Row = object
-    cpu, cores, freq, ram, disk, os, run1, run2: string
+    cpu, cores, freq, ram, disk, os, link: string
+    run1, run2 : float
 
 template updateValue(row: var Row, line: string, tag) =
   if line.toUpper().startsWith(toUpper(astToStr(tag)) & ':'):
@@ -24,31 +24,31 @@ proc processBody(body: string): Row =
     updateValue(result, l, disk)
     updateValue(result, l, os)
     if l.contains("seconds:"):
-      if result.run1.len == 0:
-        result.run1 = (l.split(':'))[0].strip()
-        result.run1.removeSuffix(" seconds")
+      if result.run1 == float.default:
+        var run1 = l.split(':')[0].strip().replace(",", ".")
+        run1.removeSuffix(" seconds")
+        result.run1 = parseFloat(run1)
       else:
-        result.run2 = (l.split(':'))[0].strip()
-        result.run2.removeSuffix(" seconds")
+        var run2 = l.split(':')[0].strip().replace(",", ".")
+        run2.removeSuffix(" seconds")
+        result.run2 = parseFloat(run2)
 
   result
 
 proc process(j: JsonNode) =
-  let tbl = newAsciiTable()
   # tbl.separateRows = false
-  tbl.setHeaders(@["CPU", "Cores", "Freq", "Ram", "Disk", "OS", "build_all (s)", "koch temp (s)"])
+  echo "CPU|Cores|OS|build_all(s)|koch temp(s)|Link"
+  echo "---|-----|--|------------|------------|----"
 
   var t: seq[Row]
 
   for issue in j:
-    t.add processBody issue{"body"}.getStr
+    var row = processBody issue{"body"}.getStr
+    row.link = "[" & $issue["number"].getInt & "](" & issue["url"].getStr & ")"
+    t.add row
 
-  for row in t.sortedByIt(it.run1):
-    tbl.addRow @[row.cpu, row.cores, row.freq, row.ram, row.disk, row.os, row.run1, row.run2]
-
-  tbl.printTable()
-
-
+  for row in t.sortedByIt(it.run1 + it.run2):
+    echo @[row.cpu, row.cores, row.os, $row.run1, $row.run2, row.link].join("|")
 
 proc main() =
   let req = getIssues.call("stats")
