@@ -3,13 +3,14 @@ import std/asyncdispatch
 import json
 import strutils
 import algorithm
+import decimal
 
 import github
 
 type
   Row = object
     cpu, cores, freq, ram, disk, os, link: string
-    run1, run2 : float
+    run1, run2: DecimalType
 
 template updateValue(row: var Row, line: string, tag) =
   if line.toUpper().startsWith(toUpper(astToStr(tag)) & ':'):
@@ -24,14 +25,14 @@ proc processBody(body: string): Row =
     updateValue(result, l, disk)
     updateValue(result, l, os)
     if l.contains("seconds:"):
-      if result.run1 == float.default:
+      if result.run1.isNil:
         var run1 = l.split(':')[0].strip().replace(",", ".")
         run1.removeSuffix(" seconds")
-        result.run1 = parseFloat(run1)
+        result.run1 = newDecimal(run1)
       else:
         var run2 = l.split(':')[0].strip().replace(",", ".")
         run2.removeSuffix(" seconds")
-        result.run2 = parseFloat(run2)
+        result.run2 = newDecimal(run2)
 
   result
 
@@ -51,7 +52,7 @@ proc process(j: JsonNode) =
     echo @[row.cpu, row.cores, row.os, $row.run1, $row.run2, row.link].join("|")
 
 proc main() =
-  let req = getIssues.call("stats")
+  let req = getReposOwnerRepoIssues.call("stats", "bench_nim_build", "inv2004")
   let res = waitFor req.retry(tries = 1)
   echo res.code
   let j = parseJson(waitFor res.body)
