@@ -6,7 +6,7 @@ jobs:
   update-table:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      issues: read
     steps:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
