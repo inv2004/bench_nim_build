@@ -3,10 +3,9 @@ on:
     types: [labeled]
 
 jobs:
-  update-table:
+  update-readme-table:
+    if: github.event.label.name == 'stats'
     runs-on: ubuntu-latest
-    # permissions:
-    #   issues: read
     steps:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
