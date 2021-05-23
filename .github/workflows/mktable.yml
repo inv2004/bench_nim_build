@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
-      - run: cd src && nimble install github -y && nim c -d:ssl -r mktable.nim
+      - run: cd src && nimble install github -y && GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} nim c -d:ssl -r mktable.nim
