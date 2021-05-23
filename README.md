@@ -4,20 +4,20 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 
 # Results
 
-Ordered by sum of build_all and koch
-
-CPU                                      | Cores | Freq         | Ram         | Disk               | OS                                        | build_all (s) | koch temp (s)
------------------------------------------|-------|--------------|-------------|--------------------|-------------------------------------------|---------------|---------------
-| Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz | 32    | 2693.672 MHz | 62Gi        |                    | Linux (5.4.0-51-generic)                  | 102.739       | 33.637        |       
-| AMD Ryzen 5 1600 Six-Core Processor      | 12    | 1550.000 MHz | 15Gi        |                    | Linux (5.12.4-arch1-2)                    | 156,267       | 48,535        |       
-| Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz  | 4     | 2925.528 MHz | 15Gi        | SanDisk Cruzer     | Linux (5.10.36-2-MANJARO)                 | 168.011       | 52.299        |       
-| Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz  | 4     | 3407.999 MHz | 12Gi        | Msft Virtual Disk  | Linux (5.4.72-microsoft-standard-WSL2)    | 172.88        | 55.53         |       
-| Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz | 8     | 2300         | 2147483648  | APPLE SSD AP0512M  | Darwin (20.4.0)                           | 188.181       | 48.974        |       
-| Macmini9,1                               | 8     | grep         | 3657728000  |                    |                                           | 206.53        | 67.27         |       
-| Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz  | 4     | 3401         | 17133088768 | KingFast           | Microsoft Windows 10 Pro                  | 231.54        | 51.79         |       
-| Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz | 4     | 1781.819 MHz | 11Gi        | SanDisk Cruzer     | Linux (5.10.36-2-MANJARO)                 | 298.918       | 93.888        |       
-| Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz | 2     | 2396         | 12733321216 | XPG GAMMIX S11 Pro | Microsoft Windows 10 Pro   (10.0.19042  ) | 370.44        | 92.67         |       
-| Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz | 4     | 2496.000 MHz | 9.2Gi       | Msft Virtual Disk  | Linux (5.4.72-microsoft-standard-WSL2)    | 397.34        | 140.62        
+CPU|Cores|OS|build_all(s)|koch temp(s)|Link
+---|-----|--|------------|------------|----
+Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz|32|Linux (5.4.0-51-generic)|102.739|33.637|[7](https://api.github.com/repos/inv2004/bench_nim_build/issues/7)
+Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103,230|27,537|[12](https://api.github.com/repos/inv2004/bench_nim_build/issues/12)
+AMD Ryzen 5 1600 Six-Core Processor|12|Linux (5.12.4-arch1-2)|156,267|48,535|[6](https://api.github.com/repos/inv2004/bench_nim_build/issues/6)
+Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.299|[10](https://api.github.com/repos/inv2004/bench_nim_build/issues/10)
+Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|172.88|55.53|[3](https://api.github.com/repos/inv2004/bench_nim_build/issues/3)
+Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|188.181|48.974|[8](https://api.github.com/repos/inv2004/bench_nim_build/issues/8)
+Macmini9,1|8||206.53|67.27|[1](https://api.github.com/repos/inv2004/bench_nim_build/issues/1)
+Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Microsoft Windows 10 Pro|231.54|51.79|[2](https://api.github.com/repos/inv2004/bench_nim_build/issues/2)
+Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.10.36-2-MANJARO)|298.918|93.888|[9](https://api.github.com/repos/inv2004/bench_nim_build/issues/9)
+Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|2|Microsoft Windows 10 Pro   (10.0.19042  )|370.44|92.67|[4](https://api.github.com/repos/inv2004/bench_nim_build/issues/4)
+Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|397.34|140.62|[5](https://api.github.com/repos/inv2004/bench_nim_build/issues/5)
+Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|905,112|292,001|[11](https://api.github.com/repos/inv2004/bench_nim_build/issues/11)
 
 # Run
 
