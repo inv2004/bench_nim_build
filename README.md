@@ -4,6 +4,8 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 
 # Results
 
+Sorted by build_all+koch_temp
+
 CPU|Cores|OS|build_all(s)|koch temp(s)|Link
 ---|-----|--|------------|------------|----
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103.230|27.537|[12](https://api.github.com/repos/inv2004/bench_nim_build/issues/12)
