@@ -10,6 +10,7 @@ CPU|Cores|OS|build_all(s)|koch temp(s)|Link
 ---|-----|--|------------|------------|----
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
 Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz|32|Linux (5.4.0-51-generic)|102.739|33.637|[7](https://github.com/inv2004/bench_nim_build/issues/7)
+Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.12.4-arch1-2)|121.251|40.853|[14](https://github.com/inv2004/bench_nim_build/issues/14)
 QEMU (AMD Ryzen 5 1600)|8|Darwin (19.6.0)|158.771|42.652|[13](https://github.com/inv2004/bench_nim_build/issues/13)
 AMD Ryzen 5 1600 Six-Core Processor|12|Linux (5.12.4-arch1-2)|156.267|48.535|[6](https://github.com/inv2004/bench_nim_build/issues/6)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.299|[10](https://github.com/inv2004/bench_nim_build/issues/10)
