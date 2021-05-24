@@ -10,12 +10,14 @@ gcc --version >nul 2>&1 || (
   exit /B 1
 )
 
-rmdir /S /Q ~\nimcache\nim_r
-rmdir /S /Q ~\nimcache\nimble_r
-rmdir /S /Q ~\nimcache\nimgrep_r
-rmdir /S /Q ~\nimcache\nimpretty_r
-rmdir /S /Q ~\nimcache\nimsuggest_r
-rmdir /S /Q ~\nimcache\testament_r
+rmdir /S /Q %USERPROFILE%\nimcache\nim_r
+rmdir /S /Q %USERPROFILE%\nimcache\nimble_r
+rmdir /S /Q %USERPROFILE%\nimcache\nimgrep_r
+rmdir /S /Q %USERPROFILE%\nimcache\nimpretty_r
+rmdir /S /Q %USERPROFILE%\nimcache\nimsuggest_r
+rmdir /S /Q %USERPROFILE%\nimcache\testament_r
+rmdir /S /Q %USERPROFILE%\nimcache\koch_d
+rmdir /S /Q %USERPROFILE%\nimcache\vccexe_d
 
 set DIR=benchnim
 
