@@ -16,7 +16,8 @@ collectinfo() {
   } || {
     echo 'CPU:' `sysctl -n machdep.cpu.brand_string`
     echo 'Cores:' `sysctl -n hw.ncpu`
-    echo 'Freq:' $((`sysctl -n hw.cpufrequency` / 1000000))
+    FREQ=`sysctl -n hw.cpufrequency`
+    [[ -n $FREQ ]] && echo 'Freq:' $(($FREQ / 1000000))
     echo 'RAM:' `sysctl -n hw.physmem`
     diskutil info disk0 | grep 'Device / Media' | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print "Disk: " $2}'
     echo "OS: $OS (`uname -r`)"
