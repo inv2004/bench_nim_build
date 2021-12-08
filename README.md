@@ -24,6 +24,7 @@ Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.2
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|172.88|55.53|[3](https://github.com/inv2004/bench_nim_build/issues/3)
 Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|188.181|48.974|[8](https://github.com/inv2004/bench_nim_build/issues/8)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
+Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
 Macmini9,1 (Scaleway)|8||206.53|67.27|[1](https://github.com/inv2004/bench_nim_build/issues/1)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Microsoft Windows 10 Pro (10.0.19042)|231.54|51.79|[2](https://github.com/inv2004/bench_nim_build/issues/2)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
