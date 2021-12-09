@@ -12,6 +12,7 @@ Apple M1 Pro|10|Darwin (21.1.0)|53.981|14.773|[34](https://github.com/inv2004/be
 Apple M1|8|Darwin (20.3.0)|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
+AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
 AMD Ryzen 9 3950X 16-Core Processor|32|Linux (4.4.0-19041-Microsoft WSL)|98.574|35.247|[15](https://github.com/inv2004/bench_nim_build/issues/15)
 Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz|32|Linux (5.4.0-51-generic)|102.739|33.637|[7](https://github.com/inv2004/bench_nim_build/issues/7)
