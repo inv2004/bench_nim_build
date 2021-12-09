@@ -8,6 +8,7 @@ Sorted by build_all+koch_temp
 
 CPU|Cores|OS|build_all(s)|koch temp(s)|Link
 ---|-----|--|------------|------------|----
+Apple M1 Pro|10|Darwin (21.1.0)|53.981|14.773|[34](https://github.com/inv2004/bench_nim_build/issues/34)
 Apple M1|8|Darwin (20.3.0)|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
