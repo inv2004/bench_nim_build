@@ -24,6 +24,7 @@ Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz|4|Darwin (20.6.0)|155.772|36.878|[35](h
 QEMU (AMD Ryzen 5 1600)|8|Darwin (19.6.0)|158.771|42.652|[13](https://github.com/inv2004/bench_nim_build/issues/13)
 AMD Ryzen 5 1600 Six-Core Processor|12|Linux (5.12.4-arch1-2)|156.267|48.535|[6](https://github.com/inv2004/bench_nim_build/issues/6)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.299|[10](https://github.com/inv2004/bench_nim_build/issues/10)
+Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|172.88|55.53|[3](https://github.com/inv2004/bench_nim_build/issues/3)
 Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|188.181|48.974|[8](https://github.com/inv2004/bench_nim_build/issues/8)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
