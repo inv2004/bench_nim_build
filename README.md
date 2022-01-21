@@ -10,6 +10,7 @@ CPU|Cores|OS|build_all(s)|koch temp(s)|Link
 ---|-----|--|------------|------------|----
 Apple M1 Max|10|Darwin (21.2.0)|51.547|13.901|[44](https://github.com/inv2004/bench_nim_build/issues/44)
 Apple M1 Pro|10|Darwin (21.1.0)|53.981|14.773|[34](https://github.com/inv2004/bench_nim_build/issues/34)
+Apple M1 Pro|8|Darwin (21.2.0)|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
 Apple M1|8|Darwin (20.3.0)|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
@@ -30,7 +31,6 @@ QEMU (AMD Ryzen 5 1600)|8|Darwin (19.6.0)|158.771|42.652|[13](https://github.com
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.299|[10](https://github.com/inv2004/bench_nim_build/issues/10)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WSL2)|169.890|54.009|[38](https://github.com/inv2004/bench_nim_build/issues/38)
-Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|188.181|48.974|[8](https://github.com/inv2004/bench_nim_build/issues/8)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
