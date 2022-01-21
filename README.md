@@ -26,7 +26,6 @@ AMD Ryzen 5 1600 Six-Core Processor|12|Linux (5.12.4-arch1-2)|156.267|48.535|[6]
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|168.011|52.299|[10](https://github.com/inv2004/bench_nim_build/issues/10)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WSL2)|169.890|54.009|[38](https://github.com/inv2004/bench_nim_build/issues/38)
-Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|172.88|55.53|[3](https://github.com/inv2004/bench_nim_build/issues/3)
 Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|188.181|48.974|[8](https://github.com/inv2004/bench_nim_build/issues/8)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
@@ -38,6 +37,7 @@ Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.10.36-2-MANJARO)|298.918|93.
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|2|Microsoft Windows 10 Pro   (10.0.19042  )|370.44|92.67|[4](https://github.com/inv2004/bench_nim_build/issues/4)
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|397.34|140.62|[5](https://github.com/inv2004/bench_nim_build/issues/5)
 Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
+Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
 
 # Run
 
