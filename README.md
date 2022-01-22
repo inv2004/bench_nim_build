@@ -14,6 +14,7 @@ Apple M1 Pro|8|Darwin (21.2.0)|59.777|15.823|[46](https://github.com/inv2004/ben
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
 Apple M1|8|Darwin (20.3.0)|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
+11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz|16|Linux (5.13.0-25-generic)|76.102|23.883|[47](https://github.com/inv2004/bench_nim_build/issues/47)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
@@ -35,7 +36,6 @@ Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|183.852|57.
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|4|Microsoft Windows 10 Pro   (10.0.19042  )|288.06|72.12|[16](https://github.com/inv2004/bench_nim_build/issues/16)
-Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.10.36-2-MANJARO)|298.918|93.888|[9](https://github.com/inv2004/bench_nim_build/issues/9)
 Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
 Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
 
