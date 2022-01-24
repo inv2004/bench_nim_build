@@ -27,6 +27,7 @@ Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.14-xanmod1)|121.605|38.1
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.12.4-arch1-2)|121.251|40.853|[14](https://github.com/inv2004/bench_nim_build/issues/14)
 AMD Ryzen 7 4700U with Radeon Graphics|8|Linux (5.16.1-xanmod1)|128.098|41.172|[41](https://github.com/inv2004/bench_nim_build/issues/41)
 Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz|8|Linux (5.7.10)|132.834|37.958|[40](https://github.com/inv2004/bench_nim_build/issues/40)
+Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.4.72-microsoft-standard-WSL2)|135.763|42.155|[49](https://github.com/inv2004/bench_nim_build/issues/49)
 Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz|4|Darwin (20.6.0)|155.772|36.878|[35](https://github.com/inv2004/bench_nim_build/issues/35)
 QEMU (AMD Ryzen 5 1600)|8|Darwin (19.6.0)|158.771|42.652|[13](https://github.com/inv2004/bench_nim_build/issues/13)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
@@ -36,7 +37,6 @@ Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|196.004|45.958|[33](
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|6|Microsoft Windows 10 Home   (10.0.19043  )|231.51|55.12|[48](https://github.com/inv2004/bench_nim_build/issues/48)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|4|Microsoft Windows 10 Pro   (10.0.19042  )|288.06|72.12|[16](https://github.com/inv2004/bench_nim_build/issues/16)
-Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
 Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
 
 # Run
