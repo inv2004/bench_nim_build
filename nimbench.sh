@@ -27,6 +27,7 @@ collectinfo() {
 bench_cmd() {
   (
     echo Benching $@
+    export CC=clang
     export TIMEFORMAT="%3R seconds: $*"
     cd Nim && ( time $@ 2>&3 ) 3>&2 2>>../time.log
   ) || { echo Error during build; exit 1; }
@@ -58,6 +59,8 @@ mkdir -p $DIR
     git clone https://github.com/nim-lang/Nim NimCloned && \
     cd NimCloned && \
     git reset --hard fac5bae7b7d87aeec48c7252029c2852ee157ac9 && \
+    sed -i -e 's@./koch boot@./koch boot --cc:clang@' ./build_all.sh && \
+    sed -i -e 's@./koch tools@./koch tools --cc:clang@' ./build_all.sh && \
     source ci/funs.sh && \
     nimDefineVars && \
     echo_run git clone -q --depth 1 $nim_csourcesUrl "$nim_csourcesDir" && \
@@ -66,8 +69,8 @@ mkdir -p $DIR
 
   [[ -d Nim ]] && rm -rf Nim
   cp -r NimCloned Nim && \
-  bench_cmd ./build_all.sh && \
-  bench_cmd ./koch temp -d:release
+  bench_cmd ./build_all.sh CC=clang && \
+  bench_cmd ./koch temp -d:release --cc:clang
 
   echo Delete $DIR folder manualy if you want to cleanup artefacts of the benchmark
 
