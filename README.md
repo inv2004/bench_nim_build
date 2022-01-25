@@ -17,7 +17,7 @@ AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|72.756|24.163|[19](http
 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz|16|Linux (5.13.0-25-generic)|76.102|23.883|[47](https://github.com/inv2004/bench_nim_build/issues/47)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
-Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
+Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (21.2.0)|106.140|27.187|[50](https://github.com/inv2004/bench_nim_build/issues/50)
 AMD Ryzen 9 3950X 16-Core Processor|32|Linux (4.4.0-19041-Microsoft WSL)|98.574|35.247|[15](https://github.com/inv2004/bench_nim_build/issues/15)
 AMD Ryzen 5 5600H with Radeon Graphics|12|Linux (5.11.0-25-generic)|107.166|34.038|[32](https://github.com/inv2004/bench_nim_build/issues/32)
 Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz|12|Linux (5.11.21_1)|109.583|36.083|[27](https://github.com/inv2004/bench_nim_build/issues/27)
