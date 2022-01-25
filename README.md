@@ -1,9 +1,9 @@
-# Blog post
-https://t.me/inv2004_dev_blog/43
-
 # build_nim_benchmarks
 
 Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
+
+# Blog post
+https://t.me/inv2004_dev_blog/43
 
 # Results
 
