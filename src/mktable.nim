@@ -1,12 +1,9 @@
 import std/httpclient
-import std/asyncdispatch
 import json
 import strutils
 import algorithm
 import decimal
 import os
-
-import github
 
 type
   Row = object
@@ -77,10 +74,9 @@ proc changeReadme(tblStr: seq[string]) =
       w.writeLine l
 
 proc main() =
-  let req = getReposOwnerRepoIssues.call("stats", "bench_nim_build", "inv2004", state = "all")
-  let res = waitFor req.retry(tries = 1)
-  echo res.code
-  let j = parseJson(waitFor res.body)
+  let client = newHttpClient(timeout = 10000)
+  let body = client.getContent("https://api.github.com/repos/inv2004/bench_nim_build/issues?state=all&labels=stats&per_page=100")
+  let j = parseJson(body)
   let tblStr = process(j)
   if paramCount() >= 1 and paramStr(1) == "readme":
     changeReadme(tblStr)
