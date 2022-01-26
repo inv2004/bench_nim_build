@@ -10,7 +10,7 @@ import github
 
 type
   Row = object
-    cpu, cores, freq, ram, disk, os, link: string
+    cpu, cores, freq, ram, disk, os, cc, link: string
     run1, run2: DecimalType
 
 template updateValue(row: var Row, line: string, tag) =
@@ -25,6 +25,13 @@ proc processBody(body: string): Row =
     updateValue(result, l, ram)
     updateValue(result, l, disk)
     updateValue(result, l, os)
+    updateValue(result, l, cc)
+    result.cc = result.cc.split()[0]
+    if result.cc.len == 0:
+      if result.os.contains("Darwin"): result.cc = "clang"
+      elif result.os.contains("Linux"): result.cc = "gcc"
+      elif result.os.contains("Windows"): result.cc = "gcc"
+
     if l.contains("seconds:"):
       if result.run1.isNil:
         var run1 = l.split(':')[0].strip().replace(",", ".")
@@ -38,8 +45,8 @@ proc processBody(body: string): Row =
   result
 
 proc process(j: JsonNode): seq[string] =
-  result.add "CPU|Cores|OS|build_all(s)|koch temp(s)|Link"
-  result.add "---|-----|--|------------|------------|----"
+  result.add "CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link"
+  result.add "---|-----|--|--|------------|------------|----"
 
   var t: seq[Row]
 
@@ -50,7 +57,7 @@ proc process(j: JsonNode): seq[string] =
     t.add row
 
   for row in t.sortedByIt(it.run1 + it.run2):
-    result.add @[row.cpu, row.cores, row.os, $row.run1, $row.run2, row.link].join("|")
+    result.add @[row.cpu, row.cores, row.os, row.cc, $row.run1, $row.run2, row.link].join("|")
 
 proc changeReadme(tblStr: seq[string]) =
   let f = open("README.md")
