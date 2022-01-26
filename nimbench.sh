@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+for V in "$@"; do
+  [[ $V == CC=* ]] && export $V || { echo "Unknown parameter $V"; exit 1; }
+done
+
 DIR=benchnim
 
 rm -rf $HOME/.cache/nim/{koch_d,nim_r,nimble_r,nimgrep_r,nimpretty_r,nimsuggest_r,testament_r}
@@ -7,13 +11,16 @@ rm -rf $HOME/.cache/nim/{koch_d,nim_r,nimble_r,nimgrep_r,nimpretty_r,nimsuggest_
 collectinfo() {
   OS=$(uname)
   [[ $OS == "Linux" ]] && {
+    export CC=${CC-gcc}
     awk -F: '/model name/ {name=$2} END {print "CPU:" name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     awk -F: '/model name/ {core++} END {print "Cores: " core}' /proc/cpuinfo
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     free -h | awk 'NR==2 {print "Ram: " $2}'
     echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | grep -v '^[[:space:]]*$' | head -n1`
     echo "OS: $OS (`uname -r`)"
+    echo 'Cc:' `$CC --version | head -n1`
   } || {
+    export CC=${CC-clang}
     echo 'CPU:' `sysctl -n machdep.cpu.brand_string`
     echo 'Cores:' `sysctl -n hw.ncpu`
     FREQ=`sysctl -n hw.cpufrequency`
@@ -21,6 +28,7 @@ collectinfo() {
     echo 'RAM:' `sysctl -n hw.physmem`
     diskutil info disk0 | grep 'Device / Media' | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print "Disk: " $2}'
     echo "OS: $OS (`uname -r`)"
+    echo 'Cc:' `$CC --version | head -n1`
   }
 }
 
@@ -46,7 +54,7 @@ openDefaultBrowser(url)
 EEE
 
 grep -i microsoft /proc/version && { export BROWSER=wslview; }
-./Nim/bin/nim c -r complete.nim
+./Nim/bin/nim c --cc:$CC -r complete.nim
 
 }
 
@@ -66,8 +74,10 @@ mkdir -p $DIR
 
   [[ -d Nim ]] && rm -rf Nim
   cp -r NimCloned Nim && \
-  bench_cmd ./build_all.sh && \
-  bench_cmd ./koch temp -d:release
+  sed -i 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh && \
+  cp /home/u/build_all.sh Nim && \
+  bench_cmd ./build_all.sh CC=$CC && \
+  bench_cmd ./koch temp -d:release --cc:$CC
 
   echo Delete $DIR folder manualy if you want to cleanup artefacts of the benchmark
 
