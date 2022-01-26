@@ -4,6 +4,9 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 
 **Blog post:** https://t.me/inv2004_dev_blog/43
 
+# Update
+Now it supports `nimbench.sh CC=clang` on Linux or `nimbench.sh CC=gcc` on MacOS
+
 # Results
 
 Sorted by build_all+koch_temp
@@ -43,7 +46,7 @@ Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|gcc|3258.861
 
 # Run
 
-**It needs git and gcc(mingw) to run it**
+**It needs git and gcc(mingw) or clang to run it**
 
 After run it will open browser to add the results into the repo automatically
 
@@ -54,6 +57,10 @@ The script deletes `koch_d` `nim_r` `nimble_r` `nimgrep_r` `nimpretty_r` `nimsug
 ```bash
 curl -O https://raw.githubusercontent.com/inv2004/bench_nim_build/main/nimbench.sh
 bash nimbench.sh
+```
+or if you have clang
+```
+bash nimbench.sh CC=clang
 ```
 
 ## Windows
