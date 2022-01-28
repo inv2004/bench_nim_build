@@ -18,6 +18,7 @@ Apple M1 Pro|10|Darwin (21.1.0)|clang|53.981|14.773|[34](https://github.com/inv2
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|gcc|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
 Apple M1|8|Darwin (20.3.0)|clang|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
+AMD Ryzen Threadripper PRO 3995WX 64-Cores|128|Linux (5.15.16-200.fc35.x86_64)|clang|68.173|19.186|[62](https://github.com/inv2004/bench_nim_build/issues/62)
 AMD Ryzen Threadripper PRO 3995WX 64-Cores|128|Linux (5.15.16-200.fc35.x86_64)|gcc|70.157|21.928|[61](https://github.com/inv2004/bench_nim_build/issues/61)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|gcc|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz|16|Linux (5.13.0-25-generic)|gcc|76.102|23.883|[47](https://github.com/inv2004/bench_nim_build/issues/47)
