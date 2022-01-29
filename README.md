@@ -22,6 +22,7 @@ AMD Ryzen Threadripper PRO 3995WX 64-Cores|128|Linux (5.15.16-200.fc35.x86_64)|c
 AMD Ryzen Threadripper PRO 3995WX 64-Cores|128|Linux (5.15.16-200.fc35.x86_64)|gcc|70.157|21.928|[61](https://github.com/inv2004/bench_nim_build/issues/61)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|gcc|72.756|24.163|[19](https://github.com/inv2004/bench_nim_build/issues/19)
 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz|16|Linux (5.13.0-25-generic)|gcc|76.102|23.883|[47](https://github.com/inv2004/bench_nim_build/issues/47)
+AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|clang|78.940|21.280|[63](https://github.com/inv2004/bench_nim_build/issues/63)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.15-76051515-generic)|clang|90.329|25.420|[53](https://github.com/inv2004/bench_nim_build/issues/53)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|gcc|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|gcc|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
