@@ -41,6 +41,7 @@ Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.16.0-051600-generic)|gcc|11
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.15.6-arch2-1)|gcc|118.803|36.275|[30](https://github.com/inv2004/bench_nim_build/issues/30)
 AMD Ryzen 7 4700U with Radeon Graphics|8|Linux (5.16.1-xanmod1)|gcc|118.317|38.841|[42](https://github.com/inv2004/bench_nim_build/issues/42)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.14-xanmod1)|gcc|121.605|38.117|[45](https://github.com/inv2004/bench_nim_build/issues/45)
+Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz|12|Linux (5.4.0-97-generic)|gcc|124.616|37.084|[66](https://github.com/inv2004/bench_nim_build/issues/66)
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.12.4-arch1-2)|gcc|121.251|40.853|[14](https://github.com/inv2004/bench_nim_build/issues/14)
 AMD Ryzen 7 4700U with Radeon Graphics|8|Linux (5.16.1-xanmod1)|gcc|128.098|41.172|[41](https://github.com/inv2004/bench_nim_build/issues/41)
 Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz|8|Linux (5.7.10)|gcc|132.834|37.958|[40](https://github.com/inv2004/bench_nim_build/issues/40)
