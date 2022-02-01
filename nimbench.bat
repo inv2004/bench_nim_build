@@ -96,14 +96,14 @@ exit /B %ERRORLEVEL%
 exit /B %ERRORLEVEL%
 
 :CollectInfo
-for /f "delims== usebackq skip=1" %%i in (`wmic cpu get Name ^| findstr /r /v "^$"`) do (echo CPU: %%i) > time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic cpu get NumberOfCores ^| findstr /r /v "^$"`) do (echo Cores: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic cpu get CurrentClockSpeed ^| findstr /r /v "^$"`) do (echo Freq: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic computersystem get TotalPhysicalMemory ^| findstr /r /v "^$"`) do (echo Ram: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic memorychip get Speed ^| findstr /r /v "^$"`) do (echo MemFreq: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic diskdrive get Model ^| findstr /r /v "^$"`) do (echo Disk: %%i) >> time.log
-for /f "delims== usebackq skip=1" %%i in (`wmic os get Caption ^| findstr /r /v "^$"`) do (set CAP=%%i)
-for /f "delims== usebackq skip=1" %%i in (`wmic os get Version ^| findstr /r /v "^$"`) do (set VER=%%i)
+for /f "delims== tokens=2 usebackq" %%i in (`wmic cpu get Name /VALUE ^| findstr /r /v "^$"`) do (echo CPU: %%i) > time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic cpu get NumberOfCores /VALUE ^| findstr /r /v "^$"`) do (echo Cores: %%i) >> time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic cpu get CurrentClockSpeed /VALUE ^| findstr /r /v "^$"`) do (echo Freq: %%i) >> time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic computersystem get TotalPhysicalMemory /VALUE ^| findstr /r /v "^$"`) do (echo Ram: %%i) >> time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic memorychip get Speed /VALUE ^| findstr /r /v "^$"`) do (echo MemFreq: %%i) >> time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic diskdrive get Model /VALUE ^| findstr /r /v "^$"`) do (echo Disk: %%i) >> time.log
+for /f "delims== tokens=2 usebackq" %%i in (`wmic os get Caption /VALUE ^| findstr /r /v "^$"`) do (set CAP=%%i)
+for /f "delims== tokens=2 usebackq" %%i in (`wmic os get Version /VALUE ^| findstr /r /v "^$"`) do (set VER=%%i)
 echo OS: %CAP% (%VER%) >> time.log
 exit /B %ERRORLEVEL%
 
