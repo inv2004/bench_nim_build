@@ -16,7 +16,7 @@ collectinfo() {
     awk -F: '/model name/ {core++} END {print "Cores: " core}' /proc/cpuinfo
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     free -h | awk 'NR==2 {print "Ram: " $2}'
-    echo "Disk:" `lsblk -n -d -o VENDOR,MODEL | grep -v '^[[:space:]]*$' | head -n1`
+    echo "Disk:" `lsblk -n -d -o VENDOR,MODEL $(findmnt -n -f --target . | awk '{print $2}') | grep -v '^[[:space:]]*$' | head -n1`
     echo "OS: $OS (`uname -r`)"
     echo 'Cc:' `$CC --version | head -n1`
   } || {
