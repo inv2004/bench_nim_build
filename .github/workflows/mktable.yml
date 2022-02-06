@@ -11,7 +11,7 @@ on:
 jobs:
   update-readme-table:
     timeout-minutes: 3
-    if: github.event.label.name == 'stats' || github.event.inputs.tags
+    if: github.event.label.name == 'stats' || github.event.inputs.tags != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
