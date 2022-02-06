@@ -3,20 +3,15 @@ on:
     types: [labeled]
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      reason:
         required: true
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
+        default: true
+        type: boolean
 
 jobs:
   update-readme-table:
     timeout-minutes: 3
-    # if: github.event.label.name == 'stats'
+    if: github.event.label.name == 'stats' || github.event.inputs.tags
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
