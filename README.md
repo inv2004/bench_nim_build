@@ -17,6 +17,7 @@ Apple M1 Max|10|Darwin (21.2.0)|clang|51.547|13.901|[44](https://github.com/inv2
 Apple M1 Pro|10|Darwin (21.1.0)|clang|53.981|14.773|[34](https://github.com/inv2004/bench_nim_build/issues/34)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|clang|59.340|15.184|[71](https://github.com/inv2004/bench_nim_build/issues/71)
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
+12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.15.57.1-microsoft-standard-WSL2)|clang|61.112|16.982|[75](https://github.com/inv2004/bench_nim_build/issues/75)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|gcc|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.10.60.1-microsoft-standard-WSL2)|clang|66.003|16.310|[69](https://github.com/inv2004/bench_nim_build/issues/69)
 Apple M1|8|Darwin (20.3.0)|clang|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
