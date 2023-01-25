@@ -7,7 +7,7 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 # Update
 Now it supports `nimbench.sh CC=clang` on Linux and `nimbench.sh CC=gcc` on MacOS
 
-# Run [here](#run-here)
+# Run [here](#run-here-1)
 
 # Results
 
