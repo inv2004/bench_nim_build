@@ -7,6 +7,8 @@ Tool to benchmark [Nim](https://github.com/nim-lang/Nim) compile time
 # Update
 Now it supports `nimbench.sh CC=clang` on Linux and `nimbench.sh CC=gcc` on MacOS
 
+# Run [here](#run-here)
+
 # Results
 
 Sorted by build_all+koch_temp
@@ -73,7 +75,7 @@ Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2
 Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|gcc|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
 Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|gcc|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
 
-# Run
+# Run here
 
 **It needs git and gcc(mingw) or clang to run it**
 
