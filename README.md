@@ -72,6 +72,7 @@ Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Microsoft Windows 10 Pro (10.0.19042)|
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|6|Microsoft Windows 10 Home   (10.0.19043  )|gcc|231.51|55.12|[48](https://github.com/inv2004/bench_nim_build/issues/48)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|gcc|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
 AMD Ryzen 5 2600 Six-Core Processor|6|Windows 10 (10.0.19045)|gcc|244.52|53.51|[81](https://github.com/inv2004/bench_nim_build/issues/81)
+AMD Ryzen 5 5500U with Radeon Graphics|6|Windows 10 Pro (10.0.19044)|gcc|285.66|63.22|[82](https://github.com/inv2004/bench_nim_build/issues/82)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|4|Microsoft Windows 10 Pro   (10.0.19042  )|gcc|288.06|72.12|[16](https://github.com/inv2004/bench_nim_build/issues/16)
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.10.36-2-MANJARO)|gcc|298.918|93.888|[9](https://github.com/inv2004/bench_nim_build/issues/9)
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|2|Microsoft Windows 10 Pro   (10.0.19042  )|gcc|370.44|92.67|[4](https://github.com/inv2004/bench_nim_build/issues/4)
