@@ -47,6 +47,7 @@ AMD Ryzen 9 5900HX with Radeon Graphics|16|Linux (5.10.16.3-microsoft-standard-W
 AMD Ryzen 5 5600H with Radeon Graphics|12|Linux (5.11.0-25-generic)|gcc|107.166|34.038|[32](https://github.com/inv2004/bench_nim_build/issues/32)
 Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz|12|Linux (5.11.21_1)|gcc|109.583|36.083|[27](https://github.com/inv2004/bench_nim_build/issues/27)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.15-76051515-generic)|gcc|111.986|35.919|[51](https://github.com/inv2004/bench_nim_build/issues/51)
+11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz|12|Linux (6.4.12-zen1-1-zen)|gcc|113.690|38.408|[89](https://github.com/inv2004/bench_nim_build/issues/89)
 Intel Xeon Processor (Cascadelake)|32|Linux (5.4.0-94-generic)|gcc|115.877|38.411|[56](https://github.com/inv2004/bench_nim_build/issues/56)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.16.0-051600-generic)|gcc|117.844|36.707|[57](https://github.com/inv2004/bench_nim_build/issues/57)
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.15.6-arch2-1)|gcc|118.803|36.275|[30](https://github.com/inv2004/bench_nim_build/issues/30)
