@@ -68,7 +68,7 @@ mkdir -p $DIR
     git reset --hard fac5bae7b7d87aeec48c7252029c2852ee157ac9 && \
     source ci/funs.sh && \
     nimDefineVars && \
-    echo_run git clone -q --depth 1 $nim_csourcesUrl "$nim_csourcesDir" && \
+    echo_run git clone -q $nim_csourcesUrl "$nim_csourcesDir" && \
     echo_run git -C "$nim_csourcesDir" checkout $nim_csourcesHash
   )
 
