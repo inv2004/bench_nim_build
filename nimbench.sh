@@ -74,7 +74,7 @@ mkdir -p $DIR
 
   [[ -d Nim ]] && rm -rf Nim
   cp -r NimCloned Nim && \
-  sed -i 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh && \
+  sed -i'' 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh && \
   bench_cmd ./build_all.sh CC=$CC && \
   bench_cmd ./koch temp -d:release --cc:$CC
 
