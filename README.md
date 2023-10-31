@@ -90,7 +90,7 @@ Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|gcc|3258.861
 
 # Run here
 
-**Plug power-cable to laptop!***
+**Plug power-cable to laptop!**
 
 **It needs git and gcc(mingw) or clang to run it**
 
