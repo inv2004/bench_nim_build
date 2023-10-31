@@ -53,7 +53,7 @@ echo url
 openDefaultBrowser(url)
 EEE
 
-grep -i microsoft /proc/version && { export BROWSER=wslview; }
+grep -i microsoft /proc/version 2>/dev/null && { export BROWSER=wslview; } || false
 ./Nim/bin/nim c --cc:$CC -r complete.nim
 
 }
