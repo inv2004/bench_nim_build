@@ -18,6 +18,7 @@ CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 Apple M2 Max|12|Darwin (23.0.0)|Apple|43.026|11.732|[92](https://github.com/inv2004/bench_nim_build/issues/92)
 Apple M2 Pro|12|Darwin 23.0.0|Apple|48.826|13.208|[93](https://github.com/inv2004/bench_nim_build/issues/93)
 Apple M1 Max|10|Darwin (21.2.0)|clang|51.547|13.901|[44](https://github.com/inv2004/bench_nim_build/issues/44)
+Apple M1 Pro|8|Darwin 23.2.0|Apple|53.328|14.788|[94](https://github.com/inv2004/bench_nim_build/issues/94)
 Apple M1 Pro|10|Darwin (21.1.0)|clang|53.981|14.773|[34](https://github.com/inv2004/bench_nim_build/issues/34)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|clang|59.340|15.184|[71](https://github.com/inv2004/bench_nim_build/issues/71)
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
