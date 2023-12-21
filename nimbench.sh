@@ -53,7 +53,7 @@ echo url
 openDefaultBrowser(url)
 EEE
 
-grep -i microsoft /proc/version && { export BROWSER=wslview; }
+grep -i microsoft /proc/version 2>/dev/null && { export BROWSER=wslview; } || false
 ./Nim/bin/nim c --cc:"$CC" -r complete.nim
 
 }
@@ -74,7 +74,8 @@ mkdir -p $DIR
 
   [[ -d Nim ]] && rm -rf Nim
   cp -r NimCloned Nim && \
-  sed -i 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh && \
+  sed 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh > Nim/build_all.sh_tmp && \
+  mv -f Nim/build_all.sh_tmp Nim/build_all.sh && chmod +x Nim/build_all.sh && \
   bench_cmd ./build_all.sh CC="$CC" && \
   bench_cmd ./koch temp -d:release --cc:"$CC"
 
