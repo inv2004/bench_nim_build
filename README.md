@@ -67,6 +67,7 @@ Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz|8|Linux (5.7.10)|gcc|132.834|37.958|[40
 AMD Ryzen 5 PRO 5650U with Radeon Graphics|12|Linux (5.15.90.1-microsoft-standard-WSL2)|gcc|125.261|47.615|[88](https://github.com/inv2004/bench_nim_build/issues/88)
 AMD Ryzen 5 PRO 5650U with Radeon Graphics|12|Linux (5.10.102.1-microsoft-standard-WSL2)|gcc|130.875|43.564|[86](https://github.com/inv2004/bench_nim_build/issues/86)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WSL2)|clang|138.672|36.898|[60](https://github.com/inv2004/bench_nim_build/issues/60)
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz|8|Linux 6.10.12-200.fc40.x86_64|gcc|135.346|40.856|[97](https://github.com/inv2004/bench_nim_build/issues/97)
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.4.72-microsoft-standard-WSL2)|gcc|135.763|42.155|[49](https://github.com/inv2004/bench_nim_build/issues/49)
 Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz|4|Darwin (20.6.0)|clang|155.772|36.878|[35](https://github.com/inv2004/bench_nim_build/issues/35)
 Intel(R) Xeon(R) CPU E5-4657L v2 @ 2.40GHz|96|Linux (5.10.32-calculate)|clang|156.965|42.078|[73](https://github.com/inv2004/bench_nim_build/issues/73)
