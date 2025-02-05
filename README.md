@@ -43,6 +43,7 @@ Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.15-76051515-generic)|cla
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.16.4-zen1-1-zen)|gcc|92.287|25.471|[64](https://github.com/inv2004/bench_nim_build/issues/64)
 Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|gcc|93.806|29.298|[28](https://github.com/inv2004/bench_nim_build/issues/28)
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|gcc|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
+12th Gen Intel(R) Core(TM) i5-12400|12|Linux 6.13.1-2-MANJARO|gcc|96.221|30.945|[98](https://github.com/inv2004/bench_nim_build/issues/98)
 AMD EPYC 7502P 32-Core Processor|64|Linux (5.4.0-94-generic)|gcc|98.760|31.569|[55](https://github.com/inv2004/bench_nim_build/issues/55)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|clang|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (21.2.0)|clang|106.140|27.187|[50](https://github.com/inv2004/bench_nim_build/issues/50)
