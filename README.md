@@ -25,6 +25,7 @@ AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|clang|59.340|15.
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.15.57.1-microsoft-standard-WSL2)|clang|61.112|16.982|[75](https://github.com/inv2004/bench_nim_build/issues/75)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|gcc|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
+2xIntel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz|80|Linux 6.12.6-1-cachyos-p920-perf|clang|63.528|17.895|[100](https://github.com/inv2004/bench_nim_build/issues/100)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.10.60.1-microsoft-standard-WSL2)|clang|66.003|16.310|[69](https://github.com/inv2004/bench_nim_build/issues/69)
 Apple M2|8|Darwin 24.0.0|Apple|66.800|18.538|[96](https://github.com/inv2004/bench_nim_build/issues/96)
 Apple M1|8|Darwin (20.3.0)|clang|66.326|19.451|[25](https://github.com/inv2004/bench_nim_build/issues/25)
