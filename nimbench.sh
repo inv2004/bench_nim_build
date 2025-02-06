@@ -18,6 +18,7 @@ collectinfo() {
     free -h | awk 'NR==2 {print "Ram: " $2}'
     echo "Disk:" $(lsblk -n -d -o VENDOR,MODEL $(findmnt -n -f --target . | awk '{print $2}') | grep -v '^[[:space:]]*$' | head -n1)
     echo "OS: $OS $(uname -r)"
+    echo "Arch: $(uname -m)"
     echo 'Cc:' $("$CC" --version | head -n1)
   else
     export CC=${CC-clang}
@@ -28,6 +29,7 @@ collectinfo() {
     echo 'RAM:' $(sysctl -n hw.physmem)
     diskutil info disk0 | grep 'Device / Media' | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print "Disk: " $2}'
     echo "OS: $OS $(uname -r)"
+    echo "Arch: $(uname -m)"
     echo 'Cc:' $("$CC" --version | head -n1)
   fi
 }
