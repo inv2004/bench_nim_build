@@ -19,6 +19,7 @@ Apple M4 Max|16|Darwin 24.3.0|Apple|32.962|8.851|[99](https://github.com/inv2004
 Apple M2 Max|12|Darwin (23.0.0)|Apple|43.026|11.732|[92](https://github.com/inv2004/bench_nim_build/issues/92)
 Apple M2 Pro|12|Darwin 23.0.0|Apple|48.826|13.208|[93](https://github.com/inv2004/bench_nim_build/issues/93)
 Apple M1 Max|10|Darwin (21.2.0)|clang|51.547|13.901|[44](https://github.com/inv2004/bench_nim_build/issues/44)
+12th Gen Intel(R) Core(TM) i5-12600|12|Linux 6.13.1-1-default|clang|52.725|14.464|[111](https://github.com/inv2004/bench_nim_build/issues/111)
 Apple M1 Pro|8|Darwin 23.2.0|Apple|53.328|14.788|[94](https://github.com/inv2004/bench_nim_build/issues/94)
 Apple M1 Pro|10|Darwin (21.1.0)|clang|53.981|14.773|[34](https://github.com/inv2004/bench_nim_build/issues/34)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux 5.15.167.4-microsoft-standard-WSL2|clang|55.382|14.341|[110](https://github.com/inv2004/bench_nim_build/issues/110)
