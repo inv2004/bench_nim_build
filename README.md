@@ -32,6 +32,7 @@ Qualcomm Snapdragon X Elite (X1E-78-100)|12|Linux 6.12.0-22-qcom-x1e|Ubuntu|54.2
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux 6.12.11_1|clang|57.675|15.594|[107](https://github.com/inv2004/bench_nim_build/issues/107)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|clang|59.340|15.184|[71](https://github.com/inv2004/bench_nim_build/issues/71)
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
+12th Gen Intel(R) Core(TM) i5-12600|12|Linux 6.8.0-41-generic|Ubuntu|59.900|16.025|[115](https://github.com/inv2004/bench_nim_build/issues/115)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.15.57.1-microsoft-standard-WSL2)|clang|61.112|16.982|[75](https://github.com/inv2004/bench_nim_build/issues/75)
 13th Gen Intel(R) Core(TM) i7-13700HX|16|Linux 6.8.0-52-generic|Ubuntu|61.696|17.757|[102](https://github.com/inv2004/bench_nim_build/issues/102)
 AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|gcc|63.551|16.777|[39](https://github.com/inv2004/bench_nim_build/issues/39)
