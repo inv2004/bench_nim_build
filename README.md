@@ -49,6 +49,7 @@ AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|clang|78.940|21.2
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.791|23.859|[79](https://github.com/inv2004/bench_nim_build/issues/79)
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.535|24.878|[78](https://github.com/inv2004/bench_nim_build/issues/78)
 AMD Ryzen 5 PRO 5650U with Radeon Graphics|12|Linux (6.2.1-arch1-1)|clang|82.840|23.588|[85](https://github.com/inv2004/bench_nim_build/issues/85)
+||Linux 6.12.0-22-qcom-x1e|gcc|83.744|28.227|[112](https://github.com/inv2004/bench_nim_build/issues/112)
 13th Gen Intel(R) Core(TM) i7-13700HX|16|Linux 6.8.0-52-generic|gcc|86.956|25.934|[101](https://github.com/inv2004/bench_nim_build/issues/101)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.15-76051515-generic)|clang|90.329|25.420|[53](https://github.com/inv2004/bench_nim_build/issues/53)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux 6.13.0-2-cachyos|gcc|89.252|28.269|[103](https://github.com/inv2004/bench_nim_build/issues/103)
