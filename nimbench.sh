@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 for V in "$@"; do
-  [[ $V == CC=* ]] && export "$V" || { echo "Unknown parameter $V"; exit 1; }
+  [[ $V == CC=* || $V == CC_EXE=* ]] && export "$V" || {
+    echo "Unknown parameter $V"
+    exit 1
+  }
 done
 
 DIR=benchnim
@@ -12,6 +15,7 @@ collectinfo() {
   OS=$(uname)
   if [[ $OS == "Linux" ]]; then
     export CC=${CC-gcc}
+    export CC_EXE=${CC_EXE-$CC}
     awk -F: '/model name/ {name=$2} END {print "CPU:" name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
     awk -F: '/model name/ {core++} END {print "Cores: " core}' /proc/cpuinfo
     awk -F: ' /cpu MHz/ {freq=$2} END {print "Freq:" freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//'
@@ -22,6 +26,7 @@ collectinfo() {
     echo 'Cc:' $("$CC" --version | head -n1)
   else
     export CC=${CC-clang}
+    export CC_EXE=${CC_EXE-$CC}
     echo 'CPU:' $(sysctl -n machdep.cpu.brand_string)
     echo 'Cores:' $(sysctl -n hw.ncpu)
     FREQ=$(sysctl -n hw.cpufrequency)
@@ -38,8 +43,11 @@ bench_cmd() {
   (
     echo Benching "$@"
     export TIMEFORMAT="%3R seconds: $*"
-    cd Nim && ( time "$@" 2>&3 ) 3>&2 2>>../time.log
-  ) || { echo Error during build; exit 1; }
+    cd Nim && (time "$@" 2>&3) 3>&2 2>>../time.log
+  ) || {
+    echo Error during build
+    exit 1
+  }
 }
 
 complete() {
@@ -55,31 +63,34 @@ echo url
 openDefaultBrowser(url)
 EEE
 
-grep -i microsoft /proc/version 2>/dev/null && { export BROWSER=wslview; } || false
-./Nim/bin/nim c --cc:"$CC" -r complete.nim
+  grep -i microsoft /proc/version 2>/dev/null && { export BROWSER=wslview; } || false
+  ./Nim/bin/nim c --cc:"$CC" --"$CC".exe="$CC_EXE" -r complete.nim
 
 }
 
 mkdir -p $DIR
 (
-  cd $DIR && \
-  collectinfo > time.log
+  cd $DIR &&
+    collectinfo >time.log
   [[ ! -d NimCloned ]] && (
-    git clone https://github.com/nim-lang/Nim NimCloned && \
-    cd NimCloned && \
-    git reset --hard fac5bae7b7d87aeec48c7252029c2852ee157ac9 && \
-    source ci/funs.sh && \
-    nimDefineVars && \
-    echo_run git clone -q "$nim_csourcesUrl" "$nim_csourcesDir" && \
-    echo_run git -C "$nim_csourcesDir" checkout "$nim_csourcesHash"
+    git clone https://github.com/nim-lang/Nim NimCloned &&
+      cd NimCloned &&
+      git reset --hard fac5bae7b7d87aeec48c7252029c2852ee157ac9 &&
+      source ci/funs.sh &&
+      nimDefineVars &&
+      echo_run git clone -q "$nim_csourcesUrl" "$nim_csourcesDir" &&
+      echo_run git -C "$nim_csourcesDir" checkout "$nim_csourcesHash"
   )
 
   [[ -d Nim ]] && rm -rf Nim
-  cp -r NimCloned Nim && \
-  sed 's/ --hints:off/ --hints:off --cc:$CC/g' Nim/build_all.sh > Nim/build_all.sh_tmp && \
-  mv -f Nim/build_all.sh_tmp Nim/build_all.sh && chmod +x Nim/build_all.sh && \
-  bench_cmd ./build_all.sh CC="$CC" && \
-  bench_cmd ./koch temp -d:release --cc:"$CC"
+  cp -r NimCloned Nim &&
+    cat Nim/build_all.sh |
+    sed 's/ --hints:off/ --hints:off --cc:$CC --$CC.exe=$CC_EXE/g' Nim/build_all.sh |
+      sed 's/nimBuildCsourcesIfNeeded "$@"/nimBuildCsourcesIfNeeded CC=$CC_EXE/g' \
+        >Nim/build_all.sh_tmp &&
+    mv -f Nim/build_all.sh_tmp Nim/build_all.sh && chmod +x Nim/build_all.sh &&
+    bench_cmd ./build_all.sh CC="$CC" CC_EXE="$CC_EXE" &&
+    bench_cmd ./koch temp -d:release --cc:"$CC" --"$CC".exe="$CC_EXE"
 
   echo Delete "$DIR" folder manualy if you want to cleanup artefacts of the benchmark
 
