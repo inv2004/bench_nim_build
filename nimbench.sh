@@ -23,7 +23,7 @@ collectinfo() {
     echo "Disk:" $(lsblk -n -d -o VENDOR,MODEL $(findmnt -n -f --target . | awk '{print $2}') | grep -v '^[[:space:]]*$' | head -n1)
     echo "OS: $OS $(uname -r)"
     echo "Arch: $(uname -m)"
-    echo 'Cc:' $("$CC" --version | head -n1)
+    echo 'Cc:' $("$CC_EXE" --version | head -n1)
   else
     export CC=${CC-clang}
     export CC_EXE=${CC_EXE-$CC}
@@ -35,7 +35,7 @@ collectinfo() {
     diskutil info disk0 | grep 'Device / Media' | awk -F ':' '{gsub(/^[ \t]+/, "", $2); print "Disk: " $2}'
     echo "OS: $OS $(uname -r)"
     echo "Arch: $(uname -m)"
-    echo 'Cc:' $("$CC" --version | head -n1)
+    echo 'Cc:' $("$CC_EXE" --version | head -n1)
   fi
 }
 
