@@ -20,7 +20,6 @@ CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
 Apple M4 Max|16|Darwin 24.3.0|clang|36.460|9.617|[118](https://github.com/inv2004/bench_nim_build/issues/118)
 Apple M4 Max|16|Darwin 24.3.0|clang|39.078|9.042|[116](https://github.com/inv2004/bench_nim_build/issues/116)
-Apple M4 Max|16|Darwin 24.3.0|clang|44.166|8.810|[119](https://github.com/inv2004/bench_nim_build/issues/119)
 Apple M2 Max|12|Darwin (23.0.0)|clang|43.026|11.732|[92](https://github.com/inv2004/bench_nim_build/issues/92)
 Apple M4 Max|16|Darwin 24.3.0|clang|47.414|9.378|[117](https://github.com/inv2004/bench_nim_build/issues/117)
 Apple M2 Pro|12|Darwin 23.0.0|clang|48.826|13.208|[93](https://github.com/inv2004/bench_nim_build/issues/93)
