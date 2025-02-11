@@ -18,6 +18,8 @@ Sorted by build_all+koch_temp
 CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 ---|-----|--|--|------------|------------|----
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
+Apple M4 Pro|14|Darwin 24.3.0|clang|34.372|9.164|[124](https://github.com/inv2004/bench_nim_build/issues/124)
+Apple M4 Pro|14|Darwin 24.3.0|clang|34.670|9.264|[125](https://github.com/inv2004/bench_nim_build/issues/125)
 Apple M4 Pro|14|Darwin 24.3.0|clang|35.914|9.838|[123](https://github.com/inv2004/bench_nim_build/issues/123)
 Apple M4 Max|16|Darwin 24.3.0|clang|36.460|9.617|[118](https://github.com/inv2004/bench_nim_build/issues/118)
 Apple M4 Max|16|Darwin 24.3.0|clang|39.078|9.042|[116](https://github.com/inv2004/bench_nim_build/issues/116)
@@ -104,7 +106,6 @@ Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WS
 Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz|8|Darwin (20.4.0)|clang|188.181|48.974|[8](https://github.com/inv2004/bench_nim_build/issues/8)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|gcc|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|clang|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
-Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Microsoft Windows 10 Pro (10.0.19042)|gcc|231.54|51.79|[2](https://github.com/inv2004/bench_nim_build/issues/2)
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|6|Microsoft Windows 10 Home   (10.0.19043  )|gcc|231.51|55.12|[48](https://github.com/inv2004/bench_nim_build/issues/48)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|gcc|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
 AMD Ryzen 5 2600 Six-Core Processor|6|Windows 10 (10.0.19045)|gcc|244.52|53.51|[81](https://github.com/inv2004/bench_nim_build/issues/81)
