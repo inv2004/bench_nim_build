@@ -12,7 +12,7 @@ type
 
 template updateValue(row: var Row, line: string, tag) =
   if line.toUpper().startsWith(toUpper(astToStr(tag)) & ':'):
-    row.tag = (line.split(':'))[1].strip()
+    row.tag = (line.split(':'))[1..^1].join().strip()
 
 proc processBody(body: string): Row =
   for l in body.split(Newlines):
@@ -23,8 +23,11 @@ proc processBody(body: string): Row =
     updateValue(result, l, disk)
     updateValue(result, l, os)
     updateValue(result, l, cc)
-    result.cc = result.cc.split()[0]
-    if result.cc.len == 0:
+    if "clang" in result.cc:
+      result.cc = "clang"
+    elif "gcc" in result.cc:
+      result.cc = "gcc"
+    else:
       if result.os.contains("Darwin"): result.cc = "clang"
       elif result.os.contains("Linux"): result.cc = "gcc"
       elif result.os.contains("Windows"): result.cc = "gcc"
