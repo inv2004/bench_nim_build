@@ -55,6 +55,7 @@ Snapdragon 8 Elite||Linux 6.6.30-android15-8-gb5f0c188ea2a-ab12656338-4k|clang|7
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.791|23.859|[79](https://github.com/inv2004/bench_nim_build/issues/79)
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.535|24.878|[78](https://github.com/inv2004/bench_nim_build/issues/78)
 AMD Ryzen 5 PRO 5650U with Radeon Graphics|12|Linux (6.2.1-arch1-1)|clang|82.840|23.588|[85](https://github.com/inv2004/bench_nim_build/issues/85)
+AMD Ryzen 7 5800X3D 8-Core Processor|16|Linux 6.6.72-1-lts|gcc|83.786|25.874|[128](https://github.com/inv2004/bench_nim_build/issues/128)
 Qualcomm Snapdragon X Elite (X1E-78-100)|12|Linux 6.12.0-22-qcom-x1e|gcc|83.744|28.227|[112](https://github.com/inv2004/bench_nim_build/issues/112)
 13th Gen Intel(R) Core(TM) i7-13700HX|16|Linux 6.8.0-52-generic|gcc|86.956|25.934|[101](https://github.com/inv2004/bench_nim_build/issues/101)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.15-76051515-generic)|clang|90.329|25.420|[53](https://github.com/inv2004/bench_nim_build/issues/53)
