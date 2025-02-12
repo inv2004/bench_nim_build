@@ -50,6 +50,7 @@ AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.11.21_1)|gcc|72.756|24.163|[19](
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.13.13-1070.native)|gcc|76.624|23.148|[68](https://github.com/inv2004/bench_nim_build/issues/68)
 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz|16|Linux (5.13.0-25-generic)|gcc|76.102|23.883|[47](https://github.com/inv2004/bench_nim_build/issues/47)
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|clang|78.940|21.280|[63](https://github.com/inv2004/bench_nim_build/issues/63)
+Snapdragon 8 Elite||Linux 6.6.30-android15-8-gb5f0c188ea2a-ab12656338-4k|clang|76.608|26.461|[127](https://github.com/inv2004/bench_nim_build/issues/127)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.10.60.1-microsoft-standard-WSL2)|gcc|78.938|25.256|[70](https://github.com/inv2004/bench_nim_build/issues/70)
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.791|23.859|[79](https://github.com/inv2004/bench_nim_build/issues/79)
 12th Gen Intel(R) Core(TM) i9-12900H|20|Linux (6.1.6-arch1-1)|gcc|81.535|24.878|[78](https://github.com/inv2004/bench_nim_build/issues/78)
