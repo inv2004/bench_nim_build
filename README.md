@@ -112,6 +112,7 @@ Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|4|Microsoft Windows 10 Pro   (10.0.190
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.10.36-2-MANJARO)|gcc|298.918|93.888|[9](https://github.com/inv2004/bench_nim_build/issues/9)
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|2|Microsoft Windows 10 Pro   (10.0.19042  )|gcc|370.44|92.67|[4](https://github.com/inv2004/bench_nim_build/issues/4)
 Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz|4|Linux (5.4.72-microsoft-standard-WSL2)|gcc|397.34|140.62|[5](https://github.com/inv2004/bench_nim_build/issues/5)
+Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz|4|Linux 6.12.11-200.fc41.x86_64|gcc|453.767|142.187|[131](https://github.com/inv2004/bench_nim_build/issues/131)
 Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz|2|Linux (5.4.0-1100-azure)|gcc|476.165|168.380|[77](https://github.com/inv2004/bench_nim_build/issues/77)
 Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|gcc|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
 Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|gcc|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
