@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: jiro4989/setup-nim-action@v1
+      - uses: jiro4989/setup-nim-action@v2
       - run: |
           nimble install decimal -y && \
           GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" nim c -d:ssl -r src/mktable.nim readme && \

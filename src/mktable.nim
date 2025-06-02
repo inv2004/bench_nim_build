@@ -33,7 +33,7 @@ proc processBody(body: string): Row =
       elif result.os.contains("Windows"): result.cc = "gcc"
 
     if l.contains("seconds:"):
-      if result.run1.isNil:
+      if result.run1.x.isNil:
         var run1 = l.split(':')[0].strip().replace(",", ".")
         run1.removeSuffix(" seconds")
         result.run1 = newDecimal(run1)
