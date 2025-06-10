@@ -17,10 +17,12 @@ Sorted by build_all+koch_temp
 
 CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 ---|-----|--|--|------------|------------|----
+Apple M4 Max|16|Darwin 24.5.0|clang|32.444|8.283|[143](https://github.com/inv2004/bench_nim_build/issues/143)
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
 Apple M4 Pro|14|Darwin 24.3.0|clang|34.293|9.153|[126](https://github.com/inv2004/bench_nim_build/issues/126)
 Apple M2 Max|12|Darwin (23.0.0)|clang|43.026|11.732|[92](https://github.com/inv2004/bench_nim_build/issues/92)
 AMD Ryzen 5 9600X 6-Core Processor|12|Linux 6.11.0-8-generic|clang|43.483|12.345|[138](https://github.com/inv2004/bench_nim_build/issues/138)
+AMD Ryzen AI 9 HX 370 w/ Radeon 890M|24|Linux 6.14.6-300.fc42.x86_64|clang|44.266|12.566|[141](https://github.com/inv2004/bench_nim_build/issues/141)
 Intel(R) Core(TM) Ultra 7 155H|22|Linux 6.13.4-2-cachyos|clang|45.624|12.965|[136](https://github.com/inv2004/bench_nim_build/issues/136)
 Apple M2 Pro|12|Darwin 23.0.0|clang|48.826|13.208|[93](https://github.com/inv2004/bench_nim_build/issues/93)
 AMD Ryzen 7 5800X3D 8-Core Processor|16|Linux 6.6.72-1-lts|clang|50.282|13.071|[129](https://github.com/inv2004/bench_nim_build/issues/129)
@@ -40,6 +42,7 @@ AMD Ryzen 9 5950X 16-Core Processor|32|Linux (5.4.0-92-generic)|clang|59.340|15.
 AMD Ryzen 7 5700X 8-Core Processor|16|Linux 6.13.5-200.fc41.x86_64|clang|58.916|16.101|[139](https://github.com/inv2004/bench_nim_build/issues/139)
 Apple M1 Pro|8|Darwin (21.2.0)|clang|59.777|15.823|[46](https://github.com/inv2004/bench_nim_build/issues/46)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux 6.8.0-41-generic|clang|59.900|16.025|[115](https://github.com/inv2004/bench_nim_build/issues/115)
+12th Gen Intel(R) Core(TM) i9-12900H|20|Linux 6.14.2-zen1-1-zen|clang|59.656|16.595|[142](https://github.com/inv2004/bench_nim_build/issues/142)
 12th Gen Intel(R) Core(TM) i5-12600|12|Linux (5.15.57.1-microsoft-standard-WSL2)|clang|61.112|16.982|[75](https://github.com/inv2004/bench_nim_build/issues/75)
 13th Gen Intel(R) Core(TM) i7-13700HX|16|Linux 6.8.0-52-generic|clang|61.696|17.757|[102](https://github.com/inv2004/bench_nim_build/issues/102)
 12th Gen Intel(R) Core(TM) i7-12800HX|24|Linux 5.15.167.4-microsoft-standard-WSL2|clang|59.523|20.623|[133](https://github.com/inv2004/bench_nim_build/issues/133)
@@ -74,7 +77,6 @@ Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz|16|Linux (5.8.0-53-generic)|gcc|93.806|
 AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|gcc|96.414|29.405|[36](https://github.com/inv2004/bench_nim_build/issues/36)
 12th Gen Intel(R) Core(TM) i5-12400|12|Linux 6.13.1-2-MANJARO|gcc|96.221|30.945|[98](https://github.com/inv2004/bench_nim_build/issues/98)
 AMD EPYC 7502P 32-Core Processor|64|Linux (5.4.0-94-generic)|gcc|98.760|31.569|[55](https://github.com/inv2004/bench_nim_build/issues/55)
-Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (19.6.0)|clang|103.230|27.537|[12](https://github.com/inv2004/bench_nim_build/issues/12)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (21.2.0)|clang|106.140|27.187|[50](https://github.com/inv2004/bench_nim_build/issues/50)
 AMD Ryzen 9 3950X 16-Core Processor|32|Linux (4.4.0-19041-Microsoft WSL)|gcc|98.574|35.247|[15](https://github.com/inv2004/bench_nim_build/issues/15)
 AMD Ryzen 9 5900HX with Radeon Graphics|16|Linux (5.10.16.3-microsoft-standard-WSL2)|gcc|103.607|34.890|[80](https://github.com/inv2004/bench_nim_build/issues/80)
@@ -103,7 +105,6 @@ Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz|4|Darwin (20.6.0)|clang|155.772|36.878|
 Intel(R) Xeon(R) CPU E5-4657L v2 @ 2.40GHz|96|Linux (5.10.32-calculate)|clang|156.965|42.078|[73](https://github.com/inv2004/bench_nim_build/issues/73)
 QEMU (AMD Ryzen 5 1600)|8|Darwin (19.6.0)|clang|158.771|42.652|[13](https://github.com/inv2004/bench_nim_build/issues/13)
 Intel(R) Xeon(R) CPU E5-4657L v2 @ 2.40GHz|96|Linux (5.10.32-calculate)|gcc|156.307|52.813|[72](https://github.com/inv2004/bench_nim_build/issues/72)
-Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.36-2-MANJARO)|gcc|168.011|52.299|[10](https://github.com/inv2004/bench_nim_build/issues/10)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|gcc|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WSL2)|gcc|169.890|54.009|[38](https://github.com/inv2004/bench_nim_build/issues/38)
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|gcc|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
@@ -115,7 +116,6 @@ AMD Ryzen 5 5500U with Radeon Graphics|6|Windows 10 Pro (10.0.19044)|gcc|285.66|
 Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|4|Microsoft Windows 10 Pro   (10.0.19042  )|gcc|288.06|72.12|[16](https://github.com/inv2004/bench_nim_build/issues/16)
 Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz|4|Linux 6.12.11-200.fc41.x86_64|gcc|453.767|142.187|[131](https://github.com/inv2004/bench_nim_build/issues/131)
 Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz|2|Linux (5.4.0-1100-azure)|gcc|476.165|168.380|[77](https://github.com/inv2004/bench_nim_build/issues/77)
-Intel(R) Celeron(R) CPU N3350 @ 1.10GHz|2|Linux (5.11.16-arch1-1)|gcc|905.112|292.001|[11](https://github.com/inv2004/bench_nim_build/issues/11)
 Intel(R) Atom(TM) CPU N270   @ 1.60GHz|2|Linux (4.15.0-142-generic)|gcc|3258.861|1172.002|[43](https://github.com/inv2004/bench_nim_build/issues/43)
 
 # Run here
