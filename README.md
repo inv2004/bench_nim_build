@@ -17,6 +17,7 @@ Sorted by build_all+koch_temp
 
 CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 ---|-----|--|--|------------|------------|----
+Intel(R) Core(TM) i9-14900HX|32|Linux 6.17.12-300.fc43.x86_64|clang|24.448|5.474|[147](https://github.com/inv2004/bench_nim_build/issues/147)
 Intel(R) Core(TM) i9-14900HX|32|Linux 6.17.12-300.fc43.x86_64|clang|28.255|5.495|[146](https://github.com/inv2004/bench_nim_build/issues/146)
 Apple M4 Max|16|Darwin 24.5.0|clang|32.444|8.283|[143](https://github.com/inv2004/bench_nim_build/issues/143)
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
@@ -80,7 +81,6 @@ AMD Ryzen 7 3700X 8-Core Processor|16|Linux (5.15.5-arch1-1.1)|gcc|96.414|29.405
 12th Gen Intel(R) Core(TM) i5-12400|12|Linux 6.13.1-2-MANJARO|gcc|96.221|30.945|[98](https://github.com/inv2004/bench_nim_build/issues/98)
 AMD EPYC 7502P 32-Core Processor|64|Linux (5.4.0-94-generic)|gcc|98.760|31.569|[55](https://github.com/inv2004/bench_nim_build/issues/55)
 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz|16|Darwin (21.2.0)|clang|106.140|27.187|[50](https://github.com/inv2004/bench_nim_build/issues/50)
-AMD Ryzen 9 3950X 16-Core Processor|32|Linux (4.4.0-19041-Microsoft WSL)|gcc|98.574|35.247|[15](https://github.com/inv2004/bench_nim_build/issues/15)
 AMD Ryzen 9 5900HX with Radeon Graphics|16|Linux (5.10.16.3-microsoft-standard-WSL2)|gcc|103.607|34.890|[80](https://github.com/inv2004/bench_nim_build/issues/80)
 AMD Ryzen 5 5600H with Radeon Graphics|12|Linux (5.11.0-25-generic)|gcc|107.166|34.038|[32](https://github.com/inv2004/bench_nim_build/issues/32)
 Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz|12|Linux (5.11.21_1)|gcc|109.583|36.083|[27](https://github.com/inv2004/bench_nim_build/issues/27)
