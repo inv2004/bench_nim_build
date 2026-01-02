@@ -17,6 +17,7 @@ Sorted by build_all+koch_temp
 
 CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 ---|-----|--|--|------------|------------|----
+Intel(R) Core(TM) i9-14900HX|32|Linux 6.17.12-300.fc43.x86_64|clang|28.255|5.495|[146](https://github.com/inv2004/bench_nim_build/issues/146)
 Apple M4 Max|16|Darwin 24.5.0|clang|32.444|8.283|[143](https://github.com/inv2004/bench_nim_build/issues/143)
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
 Apple M4 Pro|14|Darwin 24.3.0|clang|34.293|9.153|[126](https://github.com/inv2004/bench_nim_build/issues/126)
@@ -93,7 +94,6 @@ AMD Ryzen 7 4700U with Radeon Graphics|8|Linux (5.16.1-xanmod1)|gcc|118.317|38.8
 AMD Ryzen 5 PRO 5650U with Radeon Graphics|12|Linux (6.2.1-arch1-1)|gcc|118.021|39.258|[84](https://github.com/inv2004/bench_nim_build/issues/84)
 Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz|12|Linux (5.15.14-xanmod1)|gcc|121.605|38.117|[45](https://github.com/inv2004/bench_nim_build/issues/45)
 Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz|12|Linux (5.4.0-97-generic)|gcc|124.616|37.084|[66](https://github.com/inv2004/bench_nim_build/issues/66)
-Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|12|Linux (5.12.4-arch1-2)|gcc|121.251|40.853|[14](https://github.com/inv2004/bench_nim_build/issues/14)
 AMD Ryzen 7 4700U with Radeon Graphics|8|Linux (5.16.1-xanmod1)|gcc|128.098|41.172|[41](https://github.com/inv2004/bench_nim_build/issues/41)
 Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz|8|Linux (5.7.10)|gcc|132.834|37.958|[40](https://github.com/inv2004/bench_nim_build/issues/40)
 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz|8|Linux 6.10.3-arch1-1|gcc|129.893|42.170|[95](https://github.com/inv2004/bench_nim_build/issues/95)
