@@ -19,6 +19,7 @@ CPU|Cores|OS|Cc|build_all(s)|koch temp(s)|Link
 ---|-----|--|--|------------|------------|----
 Intel(R) Core(TM) i9-14900HX|32|Linux 6.17.12-300.fc43.x86_64|clang|24.448|5.474|[147](https://github.com/inv2004/bench_nim_build/issues/147)
 Intel(R) Core(TM) i9-14900HX|32|Linux 6.17.12-300.fc43.x86_64|clang|28.255|5.495|[146](https://github.com/inv2004/bench_nim_build/issues/146)
+AMD Ryzen 9 9955HX 16-Core Processor|32|Linux 6.17.12-300.fc43.x86_64|clang|31.001|8.947|[152](https://github.com/inv2004/bench_nim_build/issues/152)
 Apple M4 Max|16|Darwin 24.5.0|clang|32.444|8.283|[143](https://github.com/inv2004/bench_nim_build/issues/143)
 Apple M4 Max|16|Darwin 24.3.0|clang|32.962|8.851|[99](https://github.com/inv2004/bench_nim_build/issues/99)
 Apple M4 Pro|14|Darwin 24.3.0|clang|34.293|9.153|[126](https://github.com/inv2004/bench_nim_build/issues/126)
@@ -108,7 +109,6 @@ Intel(R) Xeon(R) CPU E5-4657L v2 @ 2.40GHz|96|Linux (5.10.32-calculate)|clang|15
 Intel(R) Xeon(R) CPU E5-4657L v2 @ 2.40GHz|96|Linux (5.10.32-calculate)|gcc|156.307|52.813|[72](https://github.com/inv2004/bench_nim_build/issues/72)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.13.13-1070.native)|gcc|168.498|52.283|[37](https://github.com/inv2004/bench_nim_build/issues/37)
 Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz|4|Linux (5.10.60.1-microsoft-standard-WSL2)|gcc|169.890|54.009|[38](https://github.com/inv2004/bench_nim_build/issues/38)
-Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz|8|Linux (5.8.0-53-generic)|gcc|183.852|57.175|[26](https://github.com/inv2004/bench_nim_build/issues/26)
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz|8|Darwin (21.1.0)|clang|196.004|45.958|[33](https://github.com/inv2004/bench_nim_build/issues/33)
 Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz|6|Microsoft Windows 10 Home   (10.0.19043  )|gcc|231.51|55.12|[48](https://github.com/inv2004/bench_nim_build/issues/48)
 Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz|6|Windows 10 Pro   (10.0.19042  )|gcc|238.43|54.74|[31](https://github.com/inv2004/bench_nim_build/issues/31)
