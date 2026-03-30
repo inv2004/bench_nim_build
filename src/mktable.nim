@@ -53,6 +53,7 @@ proc process(j: JsonNode): seq[string] =
   for issue in j:
     var row = processBody issue{"body"}.getStr
     echo issue.pretty
+    if row.run1.x.isNil or row.run2.x.isNil: continue
     row.link = "[" & $issue["number"].getInt & "](" & issue["html_url"].getStr & ")"
     t.add row
 
